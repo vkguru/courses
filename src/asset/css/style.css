@@ -1,0 +1,181 @@
+:root {
+  --courses-dark-gray: #231F20;
+  --courses-yellow: #FFC518;
+  --courses-red: #FF0000;
+  --light-gray: #F8F8F8;
+}
+
+p {
+  font-size: 1.125rem;
+  color: var(--courses-dark-gray);
+  font-family: 'Gilroy Medium';
+  opacity: .8;
+}
+
+.nav {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.nav-hld {
+  width: 90%;
+  margin: auto;
+}
+
+.hero {
+  position: relative;
+  margin-top: -120px;
+  z-index: -1;
+  display: block;
+}
+
+.hero-banner:after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  top: -5px;
+  height: 100%;
+  width: 100%;
+  opacity: .6;
+}
+
+.banner-img {
+  height: auto;
+}
+
+.banner-img img {
+  width: 100%;
+}
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.banner-text h1 {
+  font-family: 'Gilroy Bold';
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.banner-text h2 {
+  font-family: 'Gilroy Regular';
+  font-size: 2rem;
+  margin-top: -20px;
+  text-transform: capitalize;
+}
+
+.vid-btn {
+  width: 10%;
+  margin: auto;
+  text-align: center;
+}
+
+.vid-btn svg {
+  cursor: pointer;
+}
+
+.section {
+  width: 100%;
+  display: block;
+}
+
+.intro-hd {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  padding-top: 0.56rem;
+  padding-bottom: 1.5rem;
+}
+
+.intro-hd h2 {
+  font-size: 2rem;
+  font-family: 'Gilroy SemiBold';
+  line-height: 38px;
+}
+
+.intro-sub {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.intro-sub h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.brands {
+  padding-top: 3rem;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.int {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.courses-link {
+  text-transform: capitalize;
+  border-radius: 5px;
+  background-color: var(--courses-yellow);
+  padding: 15px 30px;
+  text-decoration: none;
+  color: var(--courses-dark-gray);
+  font-family: 'Gilroy SemiBold';
+  font-size: 1.125rem;
+}
+
+.cta {
+  margin: 7rem auto 0;
+  text-align: center;
+}
+
+.sub-grey {
+  background-color: var(--light-gray);
+  padding: 5rem 0;
+}
+
+.row {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+
+.crd {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+}
+
+.crd h4 {
+  font-size: 1.2rem;
+}
+
+.crd p {
+  margin-top: -15px;
+}
+
+.sub {
+  padding: 5rem 0;
+}
+
+.sub h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Gilroy SemiBold';
+}
+
+@media screen and (max-width: 1280px) {
+  .intro-hd {
+    width: 45%;
+  }
+}
