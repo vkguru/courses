@@ -1,0 +1,36 @@
+import React from 'react';
+import team from '../asset/img/team.jpg';
+
+function Jointeam() {
+  return (
+    <>
+      <section className="section sub-grey">
+
+        <h3 className="sub-grey-heading">Join as a team</h3>
+        <p className="sub-grey-text">Teams of 5 or more get 10% off!</p>
+
+        <div className="team-img">
+          <img src={team} alt="Team" />
+        </div>
+
+        <div className="cta-team">
+          <a href="/" className="courses-link">Join As A Team</a>
+        </div>
+      
+      </section>
+
+      <section className="section sub">
+        <div className="subc-text">
+          <p>Subscribe to gain more knowledge get free tools, ebooks and resources for free in your mail</p>
+          <form>
+            <input type="email" placeholder="username@email.com" className="form-control"/>
+            <input type="submit" value="Subscribe" className="submit"/>
+          </form>
+        </div>
+        
+      </section>
+    </>
+  )
+}
+
+export default Jointeam;

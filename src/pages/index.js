@@ -5,6 +5,10 @@ import Intro from '../component/intro';
 import '../asset/css/style.css';
 import Subintro from '../component/sub-intro';
 import Masterclass from '../component/mclass';
+import Masterclassin from '../component/maclass';
+import Instructor from '../component/instructor';
+import Jointeam from '../component/jointeam';
+import Footer from '../component/footer';
 
 function Index() {
   return (
@@ -14,6 +18,10 @@ function Index() {
       <Intro />
       <Subintro />
       <Masterclass />
+      <Masterclassin />
+      <Instructor />
+      <Jointeam />
+      <Footer />
     </>
   )
 }
