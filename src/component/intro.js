@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Union from '../asset/img/unionbank.svg';
 import Firstbank from '../asset/img/first-bank.svg';
 import DesignSprint from '../asset/img/DesignSprint.svg';
@@ -28,7 +29,8 @@ function Intro() {
       </div>
 
       <div className="cta">
-        <a href="/" className="courses-link">Join the Masterclass Now</a>
+        {/* <a href="/cart" className="courses-link">Join the Masterclass Now</a> */}
+        <Link to="/cart" className="courses-link">Join the Masterclass Now</Link>
       </div>
     </section>
   )

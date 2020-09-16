@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from '../asset/img/logo.png';
+import { Link } from 'react-router-dom';
+import logoDark from '../asset/img/logoo.png';
 
  function NavDark() {
   return (
     <nav className="nav">
       <div className="nav-hld">
         <div className="logo">
-          <a href="/">
-            <img src={logo} alt="logo"/>
-          </a>
+          <Link to="/">
+            <img src={logoDark} alt="logo"/>
+          </Link>
         </div>
       </div>
     </nav>

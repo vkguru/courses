@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import team from '../asset/img/team.jpg';
 
 function Jointeam() {
@@ -14,7 +15,7 @@ function Jointeam() {
         </div>
 
         <div className="cta-team">
-          <a href="/" className="courses-link">Join As A Team</a>
+          <Link to="/cart" className="courses-link">Join As A Team</Link>
         </div>
       
       </section>

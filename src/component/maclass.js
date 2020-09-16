@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import videoPreload from '../asset/img/video-preload.jpg';
 import innovationVid from '../asset/img/innovation-vid.jpg';
 import designThinking from '../asset/img/design-thinking.jpg';
@@ -54,7 +55,7 @@ function Masterclassin() {
           </div>
 
           <div className="vid-summary-cta">
-            <a href="/" className="courses-link">Join the Masterclass Now</a>
+            <Link to="/cart" className="courses-link">Join the Masterclass Now</Link>
           </div>
 
         </div>  

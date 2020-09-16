@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../asset/img/logo.png';
 
  function Nav() {
@@ -6,9 +7,9 @@ import logo from '../asset/img/logo.png';
     <nav className="nav">
       <div className="nav-hld">
         <div className="logo">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="logo"/>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
