@@ -8,6 +8,49 @@ import productImage from '../asset/img/product.jpg'
 
 function Pay() {
   const back = () =>  window.history.back();
+
+  const options = [
+    {
+      label: '1',
+      value: '1'
+    },
+    {
+      label: '2',
+      value: '2'
+    },
+    {
+      label: '3',
+      value: '3'
+    },
+    {
+      label: '4',
+      value: '4'
+    },
+    {
+      label: '5',
+      value: '5'
+    },
+    {
+      label: '6',
+      value: '6'
+    },
+    {
+      label: '7',
+      value: '7'
+    },
+    {
+      label: '8',
+      value: '8'
+    },
+    {
+      label: '9',
+      value: '9'
+    },
+    {
+      label: '10+',
+      value: '10+'
+    }
+  ]
   return (
     <>
       <NavDark />
@@ -154,16 +197,9 @@ function Pay() {
               <div className="sel-output">
 
                 <select>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10+">10+</option>
+                  {options.map((option) => (
+                    <option value={option.value}>{option.label}</option>
+                  ))}
                 </select>
 
                 </div>

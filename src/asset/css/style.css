@@ -652,14 +652,14 @@ ul.vid-list li {
   margin-bottom: 3rem;
 }
 
-.divider p:before, .divider p:after {
+/* .divider p:before, .divider p:after {
   content: '';
   display: block;
   background-color: #878787;
   height: 1px;
   width: 30%;
   opacity: 0.5;
-}
+} */
 
 .payment-form {
   display: flex;
