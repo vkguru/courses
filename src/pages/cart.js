@@ -1,5 +1,7 @@
 import React from 'react';
 import NavDark from '../component/navbar-dark';
+import Footer from '../component/footer';
+import { Link } from 'react-router-dom';
 import productImage from '../asset/img/product.jpg'
 
 function Cart() {
@@ -44,6 +46,9 @@ function Cart() {
             <option value="5">5</option>
             <option value="6">6</option>
             <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10+">10+</option>
           </select>
         </div>
 
@@ -58,6 +63,16 @@ function Cart() {
           </svg>
         </div>
       </div>
+
+      <div className="prod-pricing">
+        <div className="pricing-container">
+          <p>Subtotal: <span>NGN 20,000</span></p>
+          <p>Tax: <span>NGN 1000</span></p>
+          <p id="total">Total <span>NGN 21,000</span></p>
+          <Link to='/checkout' className="courses-link b-nxt">Checkout</Link>
+        </div>
+      </div>
+      <Footer />
     </>
   )
 }
