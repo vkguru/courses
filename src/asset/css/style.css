@@ -1,6 +1,6 @@
 * {
   outline: none;
-  animation: fadeEffect 1s linear;
+  animation: fadeEffect .5s linear;
 }
 
 :root {
