@@ -1,10 +1,13 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import image from '../asset/img/holder.jpg';
+import Omotayo from '../asset/img/Omotayo.png'
+import Steph from '../asset/img/Steph.png'
 
 function Instructor() {
+  SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
   return (
     <section className="section sub">
         <h2>Our Instructors</h2>
@@ -76,19 +79,48 @@ function Instructor() {
 
       </div>
 
-      <div>
+      <div className="testimony">
 
       <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      slidesPerView={3}
+      loop
+      centeredSlides
+      grabCursor
+      height={500}
+      // autoplay
+      navigation
+      // pagination={{ clickable: true }}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        ...
+        <SwiperSlide>
+          <div className="cr-slide">
+            <div className="cr-slide-text">
+              We were positively impacted by your session. We are sincerely looking forward to having you with us again."
+            </div>
+            <div className="cr-testifr">
+              <img src={Omotayo} alt="Omotayo"/>
+              <div className="cr-testifr-info">
+                <h3>Omotayo Isabemoi</h3>
+                <h4>Product Manager, First Bank</h4>
+              </div>
+            </div>
+          </div>
+
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="cr-slide">
+              <div className="cr-slide-text">
+                If you are planning to run Design Sprints in Nigeria, you should connect with DODO</div>
+              <div className="cr-testifr">
+                <img src={Steph} alt="Steph"/>
+                <div className="cr-testifr-info">
+                  <h3>Steph Crouchon</h3>
+                  <h4>CEO & Founder, Design Sprint LTD</h4>
+                </div>
+              </div>
+          </div>
+        </SwiperSlide>
+
+        
       </Swiper>
 
       </div>

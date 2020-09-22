@@ -1,7 +1,6 @@
 import React from 'react';
 import NavDark from '../component/navbar-dark';
 import TabContent from '../component/tabContent';
-import { Link } from 'react-router-dom';
 import videoPreload from '../asset/img/video-preload.jpg';
 import innovationVid from '../asset/img/innovation-vid.jpg';
 import designThinking from '../asset/img/design-thinking.jpg';

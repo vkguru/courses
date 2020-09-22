@@ -837,6 +837,84 @@ ul.vid-list li {
   border-radius: 5px 5px 0 0;
 }
 
+.testimony {
+  width: 80%;
+  height: 300px;
+  margin: 6rem auto 0;
+}
+
+.cr-slide {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 600px;
+  padding: 100px 50px;
+  box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+}
+
+.cr-slide-text {
+  font-family: 'Gilroy Medium';
+  font-size: 1.4rem;
+}
+
+.cr-testifr {
+  display: flex;
+  padding-top: 30px;
+}
+
+.cr-testifr img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.cr-testifr-info {
+  padding-left: 10px;
+}
+
+.cr-testifr-info h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.cr-testifr-info h4 {
+  margin: 0;
+  padding: 0;
+  color: var(--courses-yellow)
+}
+
+.swiper-slide.swiper-slide-active {
+  transform: scale(1);
+  width: 800px;
+  z-index: 2;
+  margin-left: -170px;
+  box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+  opacity: 1;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active.cr-slide {
+  box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+}
+
+.swiper-slide .swiper-slide-duplicate .swiper-slide-visible .swiper-slide-prev {
+  background-color: #f7f7f7;
+}
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+  content: 'next';
+  color: var(--courses-yellow);
+  font-size: 20px!important;
+  font-weight: bold;
+}
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+  content: 'prev';
+  color: var(--courses-yellow);
+  font-size: 20px!important;
+  font-weight: bold;
+}
+
+
+
 @media screen and (max-width: 1280px) {
   .intro-hd {
     width: 45%;
