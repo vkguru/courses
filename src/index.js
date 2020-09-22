@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import Cart from './pages/cart';
 import Checkout from  './pages/checkout';
+import Success from './pages/success';
+import CourseBoard from './pages/courseBoard';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -13,6 +15,8 @@ const routing = (
       <Route exact path="/" component={App} />
       <Route path="/cart" component={Cart} />
       <Route path="/checkout" component={Checkout} />
+      <Route path="/payment-success" component={Success} />
+      <Route path="/course-board" component={CourseBoard} />
     </div>
   </Router>
 )
