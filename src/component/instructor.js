@@ -87,9 +87,8 @@ function Instructor() {
       centeredSlides
       grabCursor
       height={500}
-      // autoplay
+      autoplay
       navigation
-      // pagination={{ clickable: true }}
       >
         <SwiperSlide>
           <div className="cr-slide">
