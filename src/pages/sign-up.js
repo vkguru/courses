@@ -12,7 +12,6 @@ export default class Signup extends Component {
   }
 
   handleSubmit = (event) => {
-    alert('A form was submitted: ' + this.state);
     
     fetch('https://dodocourses.herokuapp.com/api/auth/register', {
       method: 'POST', 
