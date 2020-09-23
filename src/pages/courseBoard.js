@@ -5,6 +5,7 @@ import videoPreload from '../asset/img/video-preload.jpg';
 import innovationVid from '../asset/img/innovation-vid.jpg';
 import designThinking from '../asset/img/design-thinking.jpg';
 import designSprint from '../asset/img/design-sprint.jpg';
+import Footer from '../component/footer';
 
 export default function CourseBoard() {
   const back = () =>  window.history.back();
@@ -67,7 +68,7 @@ export default function CourseBoard() {
         </div>  
 
         
-        
+        <Footer />
     </section>
   )
 }

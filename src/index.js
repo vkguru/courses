@@ -7,8 +7,9 @@ import Cart from './pages/cart';
 import Checkout from  './pages/checkout';
 import Success from './pages/success';
 import CourseBoard from './pages/courseBoard';
-import * as serviceWorker from './serviceWorker';
 import Signup from './pages/sign-up';
+import Login from './pages/login';
+import * as serviceWorker from './serviceWorker';
 
 const routing = (
   <Router>
@@ -19,6 +20,7 @@ const routing = (
       <Route path="/payment-success" component={Success} />
       <Route path="/course-board" component={CourseBoard} />
       <Route path="/register" component={Signup} />
+      <Route path="/login" component={Login} />
     </div>
   </Router>
 )

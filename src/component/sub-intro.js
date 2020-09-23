@@ -57,4 +57,4 @@ function Subintro() {
   )
 }
 
-export default Subintro
+export default Subintro;

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Signup extends Component {
+export default class Login extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { name: '', email: '', password: '', password_confirmation: '' };
+    this.state = { email: '', password: '' };
   }
 
   handleChange = (event) => {
@@ -14,7 +14,7 @@ export default class Signup extends Component {
   handleSubmit = (event) => {
     alert('A form was submitted: ' + this.state);
     
-    fetch('https://dodocourses.herokuapp.com/api/auth/register', {
+    fetch('https://dodocourses.herokuapp.com/api/auth/login', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
@@ -30,22 +30,16 @@ export default class Signup extends Component {
   }
 
   render() {
-
     return (
       <div className="formHolder">
 
-        <h3>REGISTER</h3>
+        <h3>LOGIN</h3>
 
         <form className="cr-form" onSubmit={this.handleSubmit}>
 
           <div className="form-group-reg">
-            <label>Name</label>
-            <input type="text" className="pay-form-control" name="name" value={this.state.value} onChange={this.handleChange} />
-          </div>
-
-          <div className="form-group-reg">
             <label>Email Address</label>
-            <input type="text" className="pay-form-control" name="email"  value={this.state.value} onChange={this.handleChange} />
+            <input type="text" className="pay-form-control" name="email" value={this.state.value} onChange={this.handleChange} />
           </div>
 
           <div className="form-group-reg">
@@ -54,15 +48,11 @@ export default class Signup extends Component {
           </div>
 
           <div className="form-group-reg">
-            <label>Confirm Password</label>
-            <input type="password" className="pay-form-control" name="password_confirmation" value={this.state.value} onChange={this.handleChange} />
-          </div>
-
-          <div className="form-group-reg">
-            <button type="submit" className="bfl submit">Submit</button>
+            <button type="submit" className="bfl submit">Login</button>
           </div>
 
         </form>
+
       </div>
     )
   }

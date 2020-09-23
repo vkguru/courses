@@ -29,7 +29,6 @@ function Intro() {
       </div>
 
       <div className="cta">
-        {/* <a href="/cart" className="courses-link">Join the Masterclass Now</a> */}
         <Link to="/cart" className="courses-link">Join the Masterclass Now</Link>
       </div>
     </section>

@@ -913,6 +913,41 @@ ul.vid-list li {
   font-weight: bold;
 }
 
+.formHolder {
+  width: 40%;
+  margin: auto;
+  padding: 50px;
+}
+
+.form-group-reg label {
+  font-family: 'Gilroy Medium';
+  font-size: 1rem;
+}
+
+.formHolder h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Gilroy SemiBold';
+}
+
+.formHolder h3:after {
+  content: '';
+  display: block;
+  background-color: #FFC518;
+  height: 4px;
+  width: 20%;
+  margin: auto;
+}
+
+.bfl {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.form-group-reg .pay-form-control {
+  width: 88%;
+}
 
 
 @media screen and (max-width: 1280px) {
