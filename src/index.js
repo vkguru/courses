@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import Cart from './pages/cart';
@@ -13,7 +13,7 @@ import * as serviceWorker from './serviceWorker';
 
 const routing = (
   <Router>
-    <div>
+    <Switch>
       <Route exact path="/" component={App} />
       <Route path="/cart" component={Cart} />
       <Route path="/checkout" component={Checkout} />
@@ -21,7 +21,7 @@ const routing = (
       <Route path="/course-board" component={CourseBoard} />
       <Route path="/register" component={Signup} />
       <Route path="/login" component={Login} />
-    </div>
+    </Switch>
   </Router>
 )
 

@@ -10,7 +10,7 @@ export default class TabNav extends Component {
                           const active = (tab === this.props.selected ? 'active ' : '' );
                 return (
                   <div className="nav-item" key={ tab }>
-                    <a href className={ active } onClick={ () => this.props.setSelected(tab) }>
+                    <a href="true" className={ active } onClick={ () => this.props.setSelected(tab) }>
                       { tab }
                     </a>
                   </div>

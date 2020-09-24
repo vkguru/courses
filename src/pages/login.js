@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 export default class Login extends Component {
 
@@ -83,9 +84,7 @@ export default class Login extends Component {
 
           :
 
-          <div>
-            I am logged in (For test purpose)
-          </div>
+          <Redirect to="/course-board" />
         }
 
       </div>
