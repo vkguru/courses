@@ -837,6 +837,11 @@ ul.vid-list li {
   border-radius: 5px 5px 0 0;
 }
 
+button.active {
+  background: transparent;
+  border: navajowhite;
+}
+
 .testimony {
   width: 80%;
   height: 300px;

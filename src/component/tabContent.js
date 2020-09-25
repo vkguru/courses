@@ -25,6 +25,7 @@ export default class TabContent extends Component {
           </Tab>
           <Tab isSelected={ this.state.selected === 'Resources' }>
             <h1>More test text</h1>
+            <Overview />
           </Tab>
         </TabNav>
       </>
