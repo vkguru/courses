@@ -11,6 +11,11 @@ import logo from '../asset/img/logo.png';
             <img src={logo} alt="logo"/>
           </Link>
         </div>
+
+        <div className="menu">
+          <Link className="menu-text" to="/register">SIGN UP</Link>
+          <Link className="menu-text" to="/login">LOGIN</Link>
+        </div>
       </div>
     </nav>
   )

@@ -41,6 +41,47 @@ p, ul, li {
 .nav-hld {
   width: 90%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  margin: auto 0;
+}
+
+.menu-text {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Gilroy SemiBold";
+  font-size: 1.2rem;
+  padding: 0 15px;
+  margin: 0;
+  transition: all .5s ease-in-out;
+}
+
+.menu-text:after {
+  content: "";
+  display: block;
+  background: var(--courses-yellow);
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-text:hover{
+  color: var(--courses-yellow)
+}
+
+.menu-text:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.dark {
+  color: #333;
 }
 
 .hero {
@@ -954,6 +995,20 @@ button.active {
   width: 88%;
 }
 
+.cra {
+  text-align: center;
+  font-family: "Gilroy SemiBold";
+  color: #000;
+}
+
+.cra span {
+  padding: 0 5px;
+}
+
+.cra span a {
+  text-decoration: none;
+  color: var(--courses-yellow);
+}
 
 @media screen and (max-width: 1280px) {
   .intro-hd {

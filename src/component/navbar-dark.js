@@ -11,6 +11,12 @@ import logoDark from '../asset/img/logoo.png';
             <img src={logoDark} alt="logo"/>
           </Link>
         </div>
+
+        <div className="menu">
+          <Link className="menu-text dark" to="/register">SIGN UP</Link>
+          <Link className="menu-text dark" to="/login">LOGIN</Link>
+        </div>
+
       </div>
     </nav>
   )

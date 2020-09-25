@@ -68,12 +68,12 @@ export default class Login extends Component {
 
             <div className="form-group-reg">
               <label>Email Address</label>
-              <input type="text" className="pay-form-control" name="email" value={this.state.value} onChange={this.handleChange} />
+              <input type="email" className="pay-form-control" name="email" value={this.state.value} onChange={this.handleChange} required />
             </div>
 
             <div className="form-group-reg">
               <label>Password</label>
-              <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} />
+              <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} required />
             </div>
 
             <div className="form-group-reg">
