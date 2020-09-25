@@ -44,6 +44,11 @@ export default class Signup extends Component {
       isValid = false;
     }
 
+    if(password.length < 8 && password_confirmation.length < 8) {
+      errors.doubleConfirm = "Your Password length must be 8 characters or more";
+      isValid = false;
+    }
+
     if(!email.includes("@") && !email.includes(".com")) {
       errors.emailPattern = "Email has to be a valid email";
       isValid = false;
@@ -76,19 +81,11 @@ export default class Signup extends Component {
       }
     });
 
-    // const validInput = this.formValidation(); 
+   const validInput = this.formValidation(); 
 
-    this.formValidation(); 
-
-    // if(validInput) {
-    //   window.location = "/login";
-    // } else {
-    //   const err = document.querySelectorAll('.err-txt');
-    //   err.forEach(e => {
-    //     e.style.display = "block";
-    //   });
-    // }
-    
+    if(validInput === true) {
+      window.location = "/login";
+    }
     
     event.preventDefault();
   }
@@ -123,14 +120,16 @@ export default class Signup extends Component {
           <div className="form-group-reg">
             <label>Password</label>
             <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} />
-            <p className="err-txt">{this.state.errors.passwordLength}</p>
+            {/* <p className="err-txt">{this.state.errors.passwordLength}</p> */}
             <p className="err-txt">{this.state.errors.correctPassword}</p>
+            <p className="err-txt">{this.state.errors.doubleConfirm}</p>
           </div>
 
           <div className="form-group-reg">
             <label>Confirm Password</label>
             <input type="password" className="pay-form-control" name="password_confirmation" value={this.state.value} onChange={this.handleChange} />
-            <p className="err-txt">{this.state.errors.passwordConfirmLength} {this.state.errors.correctPassword}</p>
+            <p className="err-txt"> {this.state.errors.correctPassword}</p>
+            <p className="err-txt">{this.state.errors.doubleConfirm}</p>
           </div>
 
           <div className="form-group-reg">
