@@ -73,7 +73,6 @@ export default class Signup extends Component {
         console.log(response)
         return response.json();
       } else {
-        console.log('Bad request');
         const err = document.querySelectorAll('.err-txt');
         err.forEach(e => {
           e.style.display = "block";
