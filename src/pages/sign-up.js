@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom'
 
 export default class Signup extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { name: '', email: '', password: '', password_confirmation: '' };
+  constructor() {
+    super();
+    this.state = { name: '', email: '', password: '', password_confirmation: '', reg: false };
   }
 
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value})
   }
+
 
   handleSubmit = (event) => {
     
@@ -35,6 +36,8 @@ export default class Signup extends Component {
       <div className="formHolder">
 
         <h3>REGISTER</h3>
+
+        
 
         <form className="cr-form" onSubmit={this.handleSubmit}>
 
@@ -69,7 +72,7 @@ export default class Signup extends Component {
                 Login
               </Link>
             </span>
-            </p>
+          </p>
 
         </form>
       </div>

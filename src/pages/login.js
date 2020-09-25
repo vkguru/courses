@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
 
@@ -13,14 +13,11 @@ export default class Login extends Component {
     };
   }
 
-  componentDidMount()
-  {
+  componentDidMount(){
     this.storeCollector()
   }
 
-  storeCollector()
-
-  {
+  storeCollector(){
     let store = JSON.parse(localStorage.getItem('login'));
     if(store && store.login) {
       this.setState({login: true, store: store})
@@ -42,13 +39,14 @@ export default class Login extends Component {
     })
     .then(response => response.json())
     .then(data => {
-      // console.log('Success:', data);
+      console.log('Success:', data);
       localStorage.setItem('login', JSON.stringify({
         login: true,
-        store: data.token
+        store: data.access_token
       }))
       this.storeCollector()
     })
+    
 
     event.preventDefault();
   }
@@ -62,30 +60,32 @@ export default class Login extends Component {
 
         <h3>LOGIN</h3>
 
-        {
-          !this.state.login?
           <form className="cr-form" onSubmit={this.handleSubmit}>
 
             <div className="form-group-reg">
               <label>Email Address</label>
-              <input type="email" className="pay-form-control" name="email" value={this.state.value} onChange={this.handleChange} required />
+              <input type="text" className="pay-form-control" name="email" value={this.state.value} onChange={this.handleChange} />
             </div>
 
             <div className="form-group-reg">
               <label>Password</label>
-              <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} required />
+              <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} />
             </div>
 
             <div className="form-group-reg">
               <button type="submit" className="bfl submit">Login</button>
             </div>
 
+            <p className="cra">
+            Don't have an account? 
+            <span>
+              <Link to="/register">
+                Sign Up
+              </Link>
+            </span>
+            </p>
+
           </form>
-
-          :
-
-          <Redirect to="/course-board" />
-        }
 
       </div>
     )
