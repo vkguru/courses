@@ -1015,13 +1015,24 @@ button.active {
   margin: 0 0 1rem;
 }
 
-.error p {
+.error p, 
+.error-l p {
   font-family: "Gilroy SemiBold";
   font-size: 1rem;
   text-align: center;
   padding: 10px 20px;
   color: #333;
   background-color: #e7c351d1;
+}
+
+.error-l {
+  margin: 0 0 1rem;
+}
+
+.err-txt {
+  color: red;
+  font-size: 14px;
+  display: none;
 }
 
 @media screen and (max-width: 1280px) {

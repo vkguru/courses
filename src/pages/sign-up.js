@@ -5,11 +5,52 @@ export default class Signup extends Component {
 
   constructor() {
     super();
-    this.state = { name: '', email: '', password: '', password_confirmation: '', reg: false };
+    this.state = { 
+      name: '', 
+      email: '', 
+      password: '', 
+      password_confirmation: '', 
+      errors: {}
+    };
   }
 
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value})
+  }
+
+  formValidation = () => {
+    const { name, email, password, password_confirmation } = this.state;
+    let isValid = true;
+
+    const errors = {};
+
+    if(name < 1) {
+      errors.nameLength = "Your name is required";
+      isValid = false;
+    }
+
+    if(password < 8) {
+      errors.passwordLength = "Your Password length has to be 8 characters or more";
+      isValid = false;
+    }
+
+    if(password_confirmation < 8) {
+      errors.passwordConfirmLength = "Your Password length has to be 8 characters or more";
+      isValid = false;
+    }
+
+    if(password !== password_confirmation) {
+      errors.correctPassword = "Your passwords do not match";
+      isValid = false;
+    }
+
+    if(!email.includes("@") && !email.includes(".com")) {
+      errors.emailPattern = "Email has to be a valid email";
+      isValid = false;
+    }
+
+    this.setState({errors});
+    return isValid;
   }
 
 
@@ -23,12 +64,32 @@ export default class Signup extends Component {
       body: JSON.stringify(this.state),
     })
     .then(function(response) {
-      console.log(response)
-      return response.json();
+      if (response.ok) {
+        console.log(response)
+        return response.json();
+      } else {
+        console.log('Bad request');
+        const err = document.querySelectorAll('.err-txt');
+        err.forEach(e => {
+          e.style.display = "block";
+        });
+      }
     });
 
-    window.location = '/login';
+    // const validInput = this.formValidation(); 
 
+    this.formValidation(); 
+
+    // if(validInput) {
+    //   window.location = "/login";
+    // } else {
+    //   const err = document.querySelectorAll('.err-txt');
+    //   err.forEach(e => {
+    //     e.style.display = "block";
+    //   });
+    // }
+    
+    
     event.preventDefault();
   }
 
@@ -39,28 +100,37 @@ export default class Signup extends Component {
 
         <h3>REGISTER</h3>
 
-        
-
         <form className="cr-form" onSubmit={this.handleSubmit}>
+
+        {/* <div className="error-l">
+          {Object.keys(this.state.errors).map((key)=>{
+            return<p key={key}>{this.state.errors[key]}</p>
+          })}
+        </div> */}
 
           <div className="form-group-reg">
             <label>Name</label>
-            <input type="text" className="pay-form-control" name="name" value={this.state.value} onChange={this.handleChange} required />
+            <input type="text" className="pay-form-control" name="name" value={this.state.value} onChange={this.handleChange} />
+            <p className="err-txt">{this.state.errors.nameLength}</p>
           </div>
 
           <div className="form-group-reg">
             <label>Email Address</label>
-            <input type="email" className="pay-form-control" name="email"  value={this.state.value} onChange={this.handleChange} required />
+            <input type="email" className="pay-form-control" name="email"  value={this.state.value} onChange={this.handleChange} />
+            <p className="err-txt">{this.state.errors.emailPattern}</p>
           </div>
 
           <div className="form-group-reg">
             <label>Password</label>
-            <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} required />
+            <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} />
+            <p className="err-txt">{this.state.errors.passwordLength}</p>
+            <p className="err-txt">{this.state.errors.correctPassword}</p>
           </div>
 
           <div className="form-group-reg">
             <label>Confirm Password</label>
-            <input type="password" className="pay-form-control" name="password_confirmation" value={this.state.value} onChange={this.handleChange} required />
+            <input type="password" className="pay-form-control" name="password_confirmation" value={this.state.value} onChange={this.handleChange} />
+            <p className="err-txt">{this.state.errors.passwordConfirmLength} {this.state.errors.correctPassword}</p>
           </div>
 
           <div className="form-group-reg">
