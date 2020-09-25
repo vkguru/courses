@@ -9,7 +9,8 @@ export default class Login extends Component {
       email: '', 
       password: '', 
       login: false, 
-      store: null 
+      store: null,
+      error: '' 
     };
   }
 
@@ -21,6 +22,7 @@ export default class Login extends Component {
     let store = JSON.parse(localStorage.getItem('login'));
     if(store && store.login) {
       this.setState({login: true, store: store})
+      window.location = '/course-board';
     }
   }
 
@@ -37,16 +39,25 @@ export default class Login extends Component {
       },
       body: JSON.stringify(this.state),
     })
-    .then(response => response.json())
+    .then(response => { 
+      if(response.ok) {
+        return response.json()
+
+      } else {
+        this.setState({error: 'Email address or password is wrong'});
+        document.querySelector('.error').style.visibility = 'visible';
+        // console.log('Bad request');
+      }
+      })
     .then(data => {
-      console.log('Success:', data);
+      // console.log('Success:', data);
       localStorage.setItem('login', JSON.stringify({
         login: true,
         store: data.access_token
       }))
       this.storeCollector()
     })
-    
+    .catch( error => error)
 
     event.preventDefault();
   }
@@ -61,6 +72,8 @@ export default class Login extends Component {
         <h3>LOGIN</h3>
 
           <form className="cr-form" onSubmit={this.handleSubmit}>
+
+          <div className="error"><p>{this.state.error}</p></div>
 
             <div className="form-group-reg">
               <label>Email Address</label>

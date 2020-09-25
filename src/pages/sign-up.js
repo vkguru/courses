@@ -27,6 +27,8 @@ export default class Signup extends Component {
       return response.json();
     });
 
+    window.location = '/login';
+
     event.preventDefault();
   }
 

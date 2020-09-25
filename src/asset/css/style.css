@@ -1010,6 +1010,20 @@ button.active {
   color: var(--courses-yellow);
 }
 
+.error {
+  visibility: hidden;
+  margin: 0 0 1rem;
+}
+
+.error p {
+  font-family: "Gilroy SemiBold";
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px 20px;
+  color: #333;
+  background-color: #e7c351d1;
+}
+
 @media screen and (max-width: 1280px) {
   .intro-hd {
     width: 45%;
