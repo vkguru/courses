@@ -1,11 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavDark from '../component/navbar-dark';
 import Footer from '../component/footer';
-import { Link } from 'react-router-dom';
 import productImage from '../asset/img/product.jpg'
+import Signup from '../pages/sign-up';
 
 function Cart() {
   const back = () =>  window.history.back();
+  const [modalIsOpen, setmodalIsOpen] = useState(false);
+
+  let popup;
+
+  if(modalIsOpen) {
+    popup = 
+        <div className="modal">
+            <div className="modal-hld">
+              <div className="cls" onClick={() => setmodalIsOpen(false)}>Close</div>
+              <Signup />
+            </div>
+        </div>
+  }
+
   return (
     <>
       <NavDark />
@@ -38,7 +52,7 @@ function Cart() {
         </div>
 
         <div className="prod-qty">
-          <select>
+          {/* <select>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -49,7 +63,7 @@ function Cart() {
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10+">10+</option>
-          </select>
+          </select> */}
         </div>
 
         <div className="prod-price">
@@ -69,9 +83,15 @@ function Cart() {
           <p>Subtotal: <span>NGN 20,000</span></p>
           <p>Tax: <span>NGN 1000</span></p>
           <p id="total">Total <span>NGN 21,000</span></p>
-          <Link to='/checkout' className="courses-link b-nxt">Checkout</Link>
+          {/* <Link to='/register' className="courses-link b-nxt">Checkout</Link> */}
+          <button onClick={() => setmodalIsOpen(true)} className="courses-link b-nxt">Checkout</button>
         </div>
       </div>
+
+      <div className="cr-modal">
+          {popup}
+      </div>
+
       <Footer />
     </>
   )

@@ -82,12 +82,10 @@ function Instructor() {
       <div className="testimony">
 
       <Swiper
-      slidesPerView={3}
-      loop
-      centeredSlides
+      slidesPerView={1}
+      // centeredSlides
       grabCursor
       height={500}
-      autoplay
       navigation
       >
         <SwiperSlide>

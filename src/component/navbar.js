@@ -12,10 +12,10 @@ import logo from '../asset/img/logo.png';
           </Link>
         </div>
 
-        <div className="menu">
+        {/* <div className="menu">
           <Link className="menu-text" to="/register">SIGN UP</Link>
           <Link className="menu-text" to="/login">LOGIN</Link>
-        </div>
+        </div> */}
       </div>
     </nav>
   )

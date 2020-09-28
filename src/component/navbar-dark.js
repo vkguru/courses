@@ -12,10 +12,10 @@ import logoDark from '../asset/img/logoo.png';
           </Link>
         </div>
 
-        <div className="menu">
+        {/* <div className="menu">
           <Link className="menu-text dark" to="/register">SIGN UP</Link>
           <Link className="menu-text dark" to="/login">LOGIN</Link>
-        </div>
+        </div> */}
 
       </div>
     </nav>

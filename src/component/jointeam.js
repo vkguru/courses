@@ -8,7 +8,7 @@ function Jointeam() {
       <section className="section sub-grey">
 
         <h3 className="sub-grey-heading">Join as a team</h3>
-        <p className="sub-grey-text">Teams of 5 or more get 10% off!</p>
+        <p className="sub-grey-text">Teams of 5 or more gets a discount</p>
 
         <div className="team-img">
           <img src={team} alt="Team" />
