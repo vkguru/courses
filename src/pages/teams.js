@@ -28,7 +28,7 @@ export default function Teams() {
             </div>
 
             <div className="form-group-reg">
-              <label>What other courses around prototype will Your team love to learn?</label>
+              <label>What other courses around prototype will your team love to learn?</label>
               <input type="text" className="pay-form-control" name="password_confirmation" />
             </div>
 
