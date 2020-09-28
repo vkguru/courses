@@ -9,6 +9,7 @@ import Success from './pages/success';
 import CourseBoard from './pages/courseBoard';
 import Signup from './pages/sign-up';
 import Login from './pages/login';
+import Teams from './pages/teams'
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -19,6 +20,7 @@ const routing = (
       <Route path="/checkout" component={Checkout} />
       <Route path="/payment-success" component={Success} />
       <Route path="/course-board" component={CourseBoard} />
+      <Route path="/teams" component={Teams} />
       <Route path="/register" component={Signup} />
       <Route path="/login" component={Login} />
     </Switch>

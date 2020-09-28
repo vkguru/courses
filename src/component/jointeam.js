@@ -15,7 +15,7 @@ function Jointeam() {
         </div>
 
         <div className="cta-team">
-          <Link to="/cart" className="courses-link">Join As A Team</Link>
+          <Link to="/teams" className="courses-link">Join As A Team</Link>
         </div>
       
       </section>
