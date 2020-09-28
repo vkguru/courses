@@ -13,7 +13,7 @@ export default function Teams() {
           <form className="cr-form">
 
             <div className="form-group-reg">
-              <label>Name</label>
+              <label>Company Name</label>
               <input type="text" className="pay-form-control" name="name" />
             </div>
 
