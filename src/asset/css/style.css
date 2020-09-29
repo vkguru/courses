@@ -174,7 +174,7 @@ p, ul, li {
 }
 
 .brands {
-  padding-top: 3rem;
+  padding-top: 2rem;
   width: 50%;
   margin: auto;
   display: flex;
@@ -363,7 +363,7 @@ p, ul, li {
 }
 
 .vid-summary-cta {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .vid-list {
@@ -372,7 +372,7 @@ p, ul, li {
 }
 
 ul.vid-list li {
-  list-style-image: url(../img/bullet.svg);
+  /* list-style-image: url(../img/bullet.svg); */
   padding-bottom: 20px;
   line-height: 35px;
 }
@@ -886,16 +886,17 @@ button.active {
 }
 
 .testimony {
+  display: flex;
   width: 80%;
-  height: 300px;
-  margin: 6rem auto 0;
+  margin: 3rem auto 0;
+  justify-content: space-between;
 }
 
 .cr-slide {
   background-color: #fff;
   border-radius: 5px;
-  width: 600px;
-  padding: 100px 50px;
+  width: 35%;
+  padding: 50px;
   box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
 }
 
@@ -1076,6 +1077,17 @@ button.active {
   width: 5%;
   margin: auto;
   cursor: pointer;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Gilroy SemiBold";
+  padding-top: 30px;
+}
+
+.heading h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1280px) {

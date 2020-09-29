@@ -22,6 +22,10 @@ function Intro() {
         <p>Nisl laoreet odio turpis pharetra ac non. Nulla etiam quis justo massa pulvinar eget. Imperdiet scelerisque aliquam, aliquet auctor id interdum commodo cras. Urna, tellus elit volutpat velit. Netus mi cras venenatis id cras arcu. Sed eget gravida nunc venenatis, in. Id porta aliquam a amet, fames sit tortor nibh egestas. Tellus posuere augue sit eu nisl. Eu praesent quam semper volutpat a vestibulum pulvinar.Tellus facilisi nisl lectus lacus, purus. Placerat velit morbi ridiculus sit amet.</p>
       </div>
 
+      <div className="heading">
+        <h2>We've Had Past Engagements With These Brands</h2>
+      </div>
+
       <div className="brands">
         <img src={Union} alt="Union Bank Logo" />
         <img src={Firstbank} alt="First Bank Logo" />
