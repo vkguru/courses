@@ -644,6 +644,7 @@ ul.vid-list li {
   width: 85%;
   margin: auto;
   display: flex;
+  padding-bottom: 5rem;
 }
 
 .checkout-form {
