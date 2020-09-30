@@ -8,7 +8,7 @@ export default function Teams() {
 
       <div className="formHolder">
 
-          <h3>TEAMS WAILIST</h3>
+          <h3>TEAMS WAITLIST</h3>
 
           <form className="cr-form">
 

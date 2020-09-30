@@ -3,6 +3,20 @@ import Navbar from '../component/navbar-dark';
 import { Link } from 'react-router-dom';
 
 export default function Success() {
+
+  
+
+    fetch('https://dodocourses.herokuapp.com/api/auth/code')
+    .then(response => {
+      if(response.ok) {
+        console.log(response);
+        return response.json();
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
   return (
     <section className="section" id="bg-grey">
       <Navbar />
@@ -15,14 +29,12 @@ export default function Success() {
 
           <div className="content">
 
-            <h3>Congrats, you are in</h3>
-            <p>Here is your entry code</p>
+            <h3>Your payment was successful</h3>
+    
+            <p id="me">An email has been sent to the email address provided with an access code. 
+              Kindly follow the instructions to access the course</p>
 
-            <p id="code">34FSFDJUXY26</p>
-
-            <p id="me">An confirmation has been sent to your email</p>
-
-            <Link to="/courses" className="cr-link">Back to Courses</Link>
+            <Link to="/" className="cr-link">Go Back Home</Link>
           </div>
 
 
