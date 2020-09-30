@@ -49,13 +49,16 @@ export default class Signup extends Component {
           e.style.display = "block";
         });
       }
+    })
+    .then(data => {
+      // console.log('Success:', data);
+      localStorage.setItem('email', this.state.email )
+      if(validInput === true) {
+        window.location = "/checkout";
+      }
     });
 
    const validInput = this.formValidation(); 
-
-    if(validInput === true) {
-      window.location = "/checkout";
-    }
     
     event.preventDefault();
   }

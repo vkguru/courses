@@ -11,6 +11,7 @@ import Signup from './pages/sign-up';
 import Login from './pages/login';
 import Teams from './pages/teams'
 import * as serviceWorker from './serviceWorker';
+import Provider from './pages/provider';
 
 const routing = (
   <Router>
@@ -23,6 +24,7 @@ const routing = (
       <Route path="/teams" component={Teams} />
       <Route path="/register" component={Signup} />
       <Route path="/login" component={Login} />
+      <Route path="/provider" component={Provider} />
     </Switch>
   </Router>
 )

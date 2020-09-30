@@ -2,55 +2,13 @@ import React from 'react';
 import NavDark from '../component/navbar-dark';
 import Footer from '../component/footer';
 import paystackLogo from '../asset/img/paystack-logo.png';
-import Quickteller from '../asset/img/Quickteller-logo.png';
-import productImage from '../asset/img/product.jpg'
+import productImage from '../asset/img/product.jpg';
+import Provider from '../pages/provider';
 
 
 function Pay() {
   const back = () =>  window.history.back();
-
-  const options = [
-    {
-      label: '1',
-      value: '1'
-    },
-    {
-      label: '2',
-      value: '2'
-    },
-    {
-      label: '3',
-      value: '3'
-    },
-    {
-      label: '4',
-      value: '4'
-    },
-    {
-      label: '5',
-      value: '5'
-    },
-    {
-      label: '6',
-      value: '6'
-    },
-    {
-      label: '7',
-      value: '7'
-    },
-    {
-      label: '8',
-      value: '8'
-    },
-    {
-      label: '9',
-      value: '9'
-    },
-    {
-      label: '10+',
-      value: '10+'
-    }
-  ]
+  
   return (
     <>
       <NavDark />
@@ -80,101 +38,10 @@ function Pay() {
               <img src={paystackLogo} alt="Paystack Logo" />
             </div>
 
-            <div className="pay-btn">
-              <img src={Quickteller} alt="Paystack Logo" />
-            </div>
-
           </div>
+          
+          <Provider />
 
-          <div className="divider">
-            <p> Or </p>
-          </div>
-
-          <div className="product-form">
-
-            <h4>Credit Card Details</h4>
-
-            <form className="payment-form">
-
-              <div className="form-group-fl">
-                <label>Card Number</label>
-                <input type="text" className="pay-form-control" />
-              </div>
-
-              <div className="form-group-fl">
-                <label>Cardholder Name</label>
-                <input type="text" className="pay-form-control" />
-              </div>
-
-              <div className="fr">
-                <div className="form-group">
-                  <label>Expiry Date</label>
-                  <input type="text" className="pay-form-control" placeholder="MM/YY" />
-                </div>
-
-                <div className="form-group">
-                  <label>CVC/CVV</label>
-                  <input type="text" className="pay-form-control" />
-                </div>
-              </div>
-
-              <h4>Billing Information</h4>
-
-              <div className="fr">
-                <div className="form-group">
-                  <label>First Name</label>
-                  <input type="text" className="pay-form-control" />
-                </div>
-
-                <div className="form-group">
-                  <label>Last Name</label>
-                  <input type="text" className="pay-form-control" />
-                </div>
-              </div>
-
-              <div className="form-group-fl">
-                <label>Company’s Name</label>
-                <input type="text" className="pay-form-control" />
-              </div>
-
-              <div className="form-group-fl">
-                <label>Address</label>
-                <input type="text" className="pay-form-control" />
-              </div>
-
-              <div className="form-group-fl">
-                <label>City</label>
-                <input type="text" className="pay-form-control" />
-              </div>
-
-              <div className="fr">
-                <div className="form-group">
-                  <label>State</label>
-                  <input type="text" className="pay-form-control" placeholder="MM/YY" />
-                </div>
-
-                <div className="form-group">
-                  <label>Postal Code</label>
-                  <input type="text" className="pay-form-control" />
-                </div>
-              </div>
-
-              <div className="form-group-fl">
-                <label>Phone Number</label>
-                <input type="tel" className="pay-form-control" />
-              </div>
-
-              <div className="form-group-fl">
-                <label>Email Address</label>
-                <input type="email" className="pay-form-control" />
-              </div>
-
-              <div id="checkout-cta">
-                <button className="courses-link b-pay">Make Payment</button>
-              </div>
-
-            </form>
-          </div>
         </div>
 
         {/* Checkout price and product */}
@@ -193,37 +60,19 @@ function Pay() {
                 <p>Introduction to Selling Workshop</p>
               </div>
 
-              <div className="checkout-output">
-              <div className="sel-output">
-
-                <select>
-                  {options.map((option) => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
-                  ))}
-                </select>
-
-                </div>
-
-                <div className="price">
-                  <h3>NGN 20,000</h3>
-                </div>
-              </div>
-
             </div>
 
             <hr />
 
             <div className="tx-lr fl">
 
-            <p>Subtotal: <span>NGN 20,000</span></p>
+            <p>Price: <span>NGN 20,000</span></p>
             <p>Tax: <span>NGN 1000</span></p>
             <p id="total">Total <span>NGN 21,000</span></p>
 
             </div>
 
-          </div>
-
-          
+          </div>          
           
         </div>
 
