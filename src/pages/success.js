@@ -4,18 +4,22 @@ import { Link } from 'react-router-dom';
 
 export default function Success() {
 
-  
+  const token = localStorage.getItem('_cctok');
 
-    fetch('https://dodocourses.herokuapp.com/api/auth/code')
+    fetch('https://dodocourses.herokuapp.com/api/auth/code', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': token,
+        'Authentication': token
+      }
+    })
     .then(response => {
       if(response.ok) {
         console.log(response);
         return response.json();
       }
     })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
 
   return (
     <section className="section" id="bg-grey">
