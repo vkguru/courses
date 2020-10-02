@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
 
@@ -8,34 +9,26 @@ export default class Login extends Component {
       email: '', 
       password: '', 
       login: false, 
-      error: '',
+      store: null,
+      error: '' 
     };
   }
 
   componentDidMount(){
-    this.checkIfSuccessful()
+    this.storeCollector()
   }
 
-  checkIfSuccessful(){
-    const accessCode = sessionStorage.getItem('sjfsj');
-    const user = sessionStorage.getItem('uni_email');
-
-    if(this.state.email === user && this.state.password === accessCode) {
-      console.log('successful');
-      this.setState({login: true})
+  storeCollector(){
+    let store = JSON.parse(localStorage.getItem('login'));
+    if(store && store.login) {
+      this.setState({login: true, store: store})
       window.location = '/course-board';
-      
-    } else {
-      console.log('error');
     }
-
   }
-
 
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value})
   }
-
 
   handleSubmit = (event) => {
     
@@ -48,8 +41,8 @@ export default class Login extends Component {
     })
     .then(response => { 
       if(response.ok) {
-        console.log(response)
         return response.json()
+
       } else {
         this.setState({error: 'Email address or password is wrong'});
         document.querySelector('.error').style.visibility = 'visible';
@@ -57,11 +50,12 @@ export default class Login extends Component {
       }
       })
     .then(data => {
-      console.log('Success:', data);
-      sessionStorage.setItem('sjfsj', data.user.code);
-      sessionStorage.setItem('uni_email', data.user.email);
-      this.checkIfSuccessful()
-      
+      // console.log('Success:', data);
+      localStorage.setItem('login', JSON.stringify({
+        login: true,
+        store: data.access_token
+      }))
+      this.storeCollector()
     })
     .catch( error => error)
 
@@ -87,13 +81,22 @@ export default class Login extends Component {
             </div>
 
             <div className="form-group-reg">
-              <label>Access Code</label>
+              <label>Password</label>
               <input type="password" className="pay-form-control" name="password" value={this.state.value} onChange={this.handleChange} />
             </div>
 
             <div className="form-group-reg">
               <button type="submit" className="bfl submit">Login</button>
             </div>
+
+            <p className="cra">
+            Don't have an account? 
+            <span>
+              <Link to="/register">
+                Sign Up
+              </Link>
+            </span>
+            </p>
 
           </form>
 

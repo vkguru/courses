@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 export default function Success() {
 
-  const token = localStorage.getItem('_cctok');
+  const token = sessionStorage.getItem('_cctok');
 
     fetch('https://dodocourses.herokuapp.com/api/auth/code', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': token,
+        'Authorization': `Bearer ${token}`,
         'Authentication': token
       }
     })

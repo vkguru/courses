@@ -4,7 +4,7 @@ import { PaystackButton } from 'react-paystack';
 export default function Provider() {
   const publicKey = "pk_test_c001786a4a1509bc3aea633b6aba21620837e88a";
   const amount = 21000 * 100; // Remember, set in kobo!
-  const emailGet = localStorage.getItem( "email" );
+  const emailGet = sessionStorage.getItem( "email" );
   const [email, setEmail] = useState(emailGet);
   const [name, setName] = useState("");
   // const [phone, setPhone] = useState("");
