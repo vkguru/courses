@@ -20,6 +20,7 @@ export default class Login extends Component {
     const accessCode = sessionStorage.getItem('sjfsj');
     const user = sessionStorage.getItem('uni_email');
 
+    //Authenticates User
     if(this.state.email === user && this.state.password === accessCode) {
       console.log('successful');
       this.setState({login: true})
@@ -27,6 +28,11 @@ export default class Login extends Component {
       
     } else {
       console.log('error');
+    }
+
+    // Check if User is still logged In
+    if(accessCode && user) {
+      window.location = '/course-board';
     }
 
   }
@@ -55,7 +61,7 @@ export default class Login extends Component {
         document.querySelector('.error').style.visibility = 'visible';
         // console.log('Bad request');
       }
-      })
+    })
     .then(data => {
       console.log('Success:', data);
       sessionStorage.setItem('sjfsj', data.user.code);

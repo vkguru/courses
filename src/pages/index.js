@@ -9,6 +9,7 @@ import Masterclassin from '../component/maclass';
 import Instructor from '../component/instructor';
 import Jointeam from '../component/jointeam';
 import Footer from '../component/footer';
+import Logout from './logout';
 
 function Index() {
   return (
@@ -21,6 +22,7 @@ function Index() {
       <Masterclassin />
       <Instructor />
       <Jointeam />
+      <Logout />
       <Footer />
     </>
   )

@@ -16,6 +16,9 @@ export default class Signup extends Component {
 
   formValidation = () => {
     const { email } = this.state;
+
+    const emailReg = sessionStorage.getItem('email_');
+
     let isValid = true;
 
     const errors = {};
@@ -23,6 +26,10 @@ export default class Signup extends Component {
     if(!email.includes("@") && !email.includes(".com")) {
       errors.emailPattern = "Email has to be a valid email";
       isValid = false;
+    }
+
+    if(emailReg === this.state.email) {
+      errors.emailPattern = "This email already exists";
     }
 
     this.setState({errors});
@@ -49,13 +56,19 @@ export default class Signup extends Component {
           e.style.display = "block";
         });
       }
+
+      if(response === 422) {
+        console.log('user already exists');
+      }
     })
     .then(data => {
       console.log('Success:', data);
+      
       if(validInput === true) {
-        window.location = "/checkout";
-        sessionStorage.setItem('email', this.state.email )
-        sessionStorage.setItem('_cctok', data.access_token )
+        // window.location = "/checkout";
+        localStorage.setItem('email_', this.state.email );
+        sessionStorage.setItem('email', this.state.email );
+        sessionStorage.setItem('_cctok', data.access_token );
       }
     });
 

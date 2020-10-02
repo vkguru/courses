@@ -11,28 +11,19 @@ export default class Logout extends Component {
   }
 
 
-  handleSubmit = (event) => {
-    
-    fetch('https://dodocourses.herokuapp.com/api/auth/logout', {
-      method: 'POST', 
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(this.state),
-    })
-    .then(function(response) {
-      if (response.ok) {
-        console.log(response)
-        return response.json();
-      } else {
-        console.log('error')
-      }
-    })
-    .then(data => {
-      console.log('Success:', data);
-      console.log('You are logged out');
-    });
-    
+  handleSubmit = () => {
+    sessionStorage.clear();
+    const currentPage = window.location.origin + '/course-board';
+    const hostOrign = window.location.origin;
+    const pathName = window.location.pathname;
+    console.log(currentPage);
+
+    if(!currentPage === `${hostOrign}/course-board`) {
+      window.location = '/login'; 
+    } else {
+      window.location = `${hostOrign}${pathName}`;
+    }
+     
   }
   render() {
     return (
