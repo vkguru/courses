@@ -65,7 +65,7 @@ export default class Signup extends Component {
       console.log('Success:', data);
       
       if(validInput === true) {
-        // window.location = "/checkout";
+        window.location = "/checkout";
         localStorage.setItem('email_', this.state.email );
         sessionStorage.setItem('email', this.state.email );
         sessionStorage.setItem('_cctok', data.access_token );

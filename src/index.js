@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Cart from './pages/cart';
@@ -11,6 +11,7 @@ import Signup from './pages/sign-up';
 import Login from './pages/login';
 import Teams from './pages/teams'
 import Provider from './pages/provider';
+import NotFoundPage from './pages/notFound';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -20,12 +21,14 @@ const routing = (
       <Route path="/cart" component={Cart} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/payment-success" component={Success} />
+      {/* { loggedUser && verCode? <Route path="/course-board" component={CourseBoard} /> :  <Route path="/login" component={Login} />} */}
       <Route path="/course-board" component={CourseBoard} />
       <Route path="/teams" component={Teams} />
       <Route path="/register" component={Signup} />
       <Route path="/login" component={Login} />
       <Route path="/provider" component={Provider} />
       <Route path="/success" component={Success} />
+      <Route path="" component={NotFoundPage} />
     </Switch>
   </Router>
 )

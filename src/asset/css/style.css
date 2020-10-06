@@ -906,6 +906,11 @@ button.active {
   width: 35%;
   padding: 50px;
   box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+  transition: .3s ease-in-out;
+}
+
+.cr-slide:hover{
+  box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08), 0px 4px 4px rgba(50, 50, 71, 0.06);
 }
 
 .cr-slide-text {
@@ -1102,6 +1107,87 @@ button.active {
   border-radius: 5px;
   margin-top: 20px;
 }
+
+.form-group-py {
+  margin-top: 20px;
+}
+
+.course-board {
+  width: 100%;
+  display: flex;
+}
+
+.vid-res {
+  width: 75%;
+}
+
+.vid-res img {
+  width: 100%;
+}
+
+.course-board-menu {
+  width: 25%;
+}
+
+.cr-progress {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.cr-hlder {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.cr-level {
+  text-align: center;
+  width: 33%;
+}
+
+.cr-level-point {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid var(--courses-yellow);
+  border-radius: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.cr-level-point.complete {
+  background-color: var(--courses-yellow);
+  font-weight: bold;
+}
+
+.cr-level-point.complete:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 13%;
+  background-color: #fcc519;
+  position: absolute;
+  top: 13.5rem;
+  z-index: -1;
+}
+
+.cr-level-text {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.course-name {
+  width: 90%;
+  margin: auto;
+}
+
+.course-name h3 {
+  font-size: 1.5rem;
+  font-family: 'Gilroy Medium';
+}
+
 
 @media screen and (max-width: 1280px) {
   .intro-hd {

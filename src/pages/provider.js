@@ -30,20 +30,26 @@ export default function Provider() {
           </div>
         </div>
           <form>
-            <label>Name</label>
-            <input
-              type="text"
-              id="name" value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="pay-form-control"
-            />
-            <label>Email</label>
-            <input
-              type="text"
-              id="email" value={emailGet}
-              onChange={(e) => setEmail(emailGet)}
-              className="pay-form-control"
-            />
+
+            <div className="form-group-py">
+              <label>Name</label>
+              <input
+                type="text"
+                id="name" value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="pay-form-control"
+              />
+            </div>
+
+            <div className="form-group-py">
+              <label>Email</label>
+              <input
+                type="text"
+                id="email" value={emailGet}
+                onChange={(e) => setEmail(emailGet)}
+                className="pay-form-control"
+              />
+            </div>
             {/* <label>Phone</label>
             <input
               type="text"
@@ -51,6 +57,7 @@ export default function Provider() {
               onChange={(e) => setPhone(e.target.value)}
               className="pay-form-control"
             /> */}
+
           </form>
           <PaystackButton {...componentProps} className="submit py" />
     </>
