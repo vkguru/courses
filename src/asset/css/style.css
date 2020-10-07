@@ -1187,6 +1187,9 @@ button.active {
   font-size: 1.5rem;
   font-family: 'Gilroy Medium';
 }
+.panel {
+  display: none;
+}
 
 
 @media screen and (max-width: 1280px) {
