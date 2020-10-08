@@ -19,7 +19,7 @@ function Masterclassin() {
           <div className="table-content">
             <h3>Course Table of Contents</h3>
 
-            <p>5 sections • 11 lectures • 3.4 Hours total length</p>
+            <p>5 Sections • 11 Lectures • 3.4 Hours total length</p>
           </div>
 
           <AccordionContent />
