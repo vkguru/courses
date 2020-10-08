@@ -174,7 +174,7 @@ p, ul, li {
 }
 
 .brands {
-  padding-top: 2rem;
+  padding: 2rem 0;
   width: 50%;
   margin: auto;
   display: flex;
@@ -219,7 +219,7 @@ p, ul, li {
 }
 
 .cta {
-  margin: 7rem auto 0;
+  margin: 4rem auto 0;
   text-align: center;
 }
 
@@ -234,16 +234,24 @@ p, ul, li {
   margin: auto;
 }
 
+
 .crd {
-  width: 30%;
+  width: 35%;
   margin: auto;
 }
 
-.crd h4 {
+.crd_ {
+  width: 40%;
+  margin: auto;
+}
+
+.crd h4,
+.crd_ h4 {
   font-size: 1.2rem;
 }
 
-.crd p {
+.crd p, 
+.crd_ p {
   margin-top: -15px;
 }
 
@@ -275,6 +283,7 @@ p, ul, li {
   width: 100%;
   height: 320px;
   object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
 
 .lrt img:hover {
@@ -282,8 +291,13 @@ p, ul, li {
 }
 
 .lrt-txt {
-  width: 95%;
+  width: 90%;
   margin: auto;
+  height: 250px;
+}
+
+.row.scr {
+  width: 80%;
 }
 
 .sub-grey-heading {
@@ -363,7 +377,8 @@ p, ul, li {
 }
 
 .vid-summary-cta {
-  margin-top: 1rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
 }
 
 .vid-list {
@@ -404,7 +419,13 @@ ul.vid-list li {
 
 .instructor-detail {
   display: flex;
-  padding: 0 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.instructor-summary {
+  width: 95%;
+  margin: auto;
 }
 
 .instructor-summary p {
@@ -413,7 +434,7 @@ ul.vid-list li {
 }
 
 .name {
-  width: 70%;
+  width: 80%;
 }
 
 .name h4 {
@@ -430,7 +451,7 @@ ul.vid-list li {
 }
 
 .social {
-  width: 30%;
+  width: 20%;
   text-align: right;
   padding: 20px 0;
 }
@@ -889,8 +910,8 @@ ul.vid-list li {
 }
 
 button.active {
-  background: transparent;
-  border: navajowhite;
+  background: #eeeeee;
+  border: none;
 }
 
 .testimony {
@@ -1118,7 +1139,7 @@ button.active {
 }
 
 .vid-res {
-  width: 75%;
+  width: 72%;
 }
 
 .vid-res img {
@@ -1126,16 +1147,17 @@ button.active {
 }
 
 .course-board-menu {
-  width: 25%;
+  width: 28%;
+  background-color: #f9f9f9;
 }
 
 .cr-progress {
   width: 100%;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 .cr-hlder {
-  width: 40%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -1144,7 +1166,6 @@ button.active {
 
 .cr-level {
   text-align: center;
-  width: 33%;
 }
 
 .cr-level-point {
@@ -1169,13 +1190,14 @@ button.active {
   width: 13%;
   background-color: #fcc519;
   position: absolute;
-  top: 13.5rem;
+  top: 11.5rem;
   z-index: -1;
 }
 
 .cr-level-text {
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   color: #000;
+  font-family: "Gilroy SemiBold";
 }
 
 .course-name {
@@ -1191,6 +1213,127 @@ button.active {
   display: none;
 }
 
+.blk {
+  display: none;
+}
+
+.accordion {
+  background-color: #e8e8e8;
+  border: none;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  font-size: 17px;
+  font-family: "Gilroy SemiBold";
+  cursor: pointer;
+}
+
+.accordion:hover {
+  background-color: #e3e3e3;
+}
+
+/* Style the accordion section */
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 5px 18px;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .accordion:hover,
+.active {
+  background-color: #ccc;
+} */
+
+/* Style the accordion content title */
+.accordion__title {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'Gilroy SemiBold';
+  opacity: 1;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.6s ease;
+  width: 6px;
+  margin-right: 0.5rem;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  background-color: #f6f6f6;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.accordion__text p {
+  font-size: 1.06rem;
+  border: 1px solid #DBDEDD;
+  margin: 0;
+  padding: 18px;
+}
+
+.accordion__text p svg {
+  vertical-align: middle;
+  margin-right: 1.2rem;
+}
+
+.chevron {
+  margin-right: 1.2rem;
+  margin-left: 5px;
+}
+
+.time {
+  float: right;
+}
+
+.accordion__total {
+    font-size: 1rem;
+}
+
+.table-content {
+  padding: 18px 0;
+  margin: 1rem 0 0;
+}
+
+.table-content h3 {
+  font-family: "Gilroy SemiBold";
+  font-size: 1.3rem;
+}
+
+.table-content h3:after {
+  content: "";
+  background-color: #ccc;
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-top: 1rem;
+}
 
 @media screen and (max-width: 1280px) {
   .intro-hd {

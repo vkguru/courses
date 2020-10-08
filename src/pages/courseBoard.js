@@ -1,28 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavDark from '../component/navbar-dark'
 import TabContent from '../component/tabContent';
 import videoPreload from '../asset/img/video-preload.jpg';
 import Footer from '../component/footer';
 import Logout from './logout';
 import { loggedUser,  verCode} from '../component/session';
-import Accordion from '../component/accordion';
+import AccordionContent from '../component/accordionContent';
 
 export default function CourseBoard() {
 
-  const acc = document.getElementsByClassName("accordion");
+  let acc = document.querySelectorAll("accordion");
   let i;
 
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       this.classList.toggle("active");
 
-      var panel = this.nextElementSibling;
+      let panel = this.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {
         panel.style.display = "block";
       }
     });
+  }
+
+  const [accordionIsOpen, setAccordionIsOpen] = useState(() => false);
+
+  let panelClass = 'panel';
+
+  if(accordionIsOpen) {
+    panelClass += 'plk'
   }
 
   if(loggedUser && verCode ) {
@@ -41,18 +49,28 @@ export default function CourseBoard() {
         <div className="cr-hlder">
 
           <div className="cr-level">
-            <p className="cr-level-text">Unit 1</p>
+            <div className="cr-level-point">0</div>
+            <p className="cr-level-text">Introduction</p>
+          </div>
+
+          <div className="cr-level">
             <div className="cr-level-point">1</div>
+            <p className="cr-level-text">Building and planning</p>
           </div>
 
           <div className="cr-level">
-            <p className="cr-level-text">Unit 2</p>
             <div className="cr-level-point">2</div>
+            <p className="cr-level-text">Testing and Learning</p>
           </div>
 
           <div className="cr-level">
-            <p className="cr-level-text">Unit 3</p>
             <div className="cr-level-point">3</div>
+            <p className="cr-level-text">Iterating and Improving</p>
+          </div>
+
+          <div className="cr-level">
+            <div className="cr-level-point">4</div>
+            <p className="cr-level-text">Conclusion</p>
           </div>
 
         </div>
@@ -74,16 +92,23 @@ export default function CourseBoard() {
           </div>
 
           <div className="acc-holder">
-            <button className="accordion">jkbasahj</button>
-            <div className="panel">nabfhaahj</div>
+            <button className="accordion" onClick={() => setAccordionIsOpen(!accordionIsOpen)}>Introduction</button>
+            <div className={panelClass}>
+              <p>History/About</p>
+              <p>Why prototype? Why test?</p>
+              <p>Types of Prototypes</p>
+            </div>
           </div>
 
-          <ul>
-            <li>Course one</li>
-          </ul>
+          <div className="acc-holder">
+            <button className="accordion" onClick={() => setAccordionIsOpen(!accordionIsOpen)}>Introduction</button>
+            <div className={panelClass}>
+              <p>History/Aboutjhvhv</p>
+              <p>Why prototype? Why test?</p>
+              <p>Types of Prototypes</p>
+            </div>
+          </div>
 
-          <Accordion title="Unit 1" paragraph="A new Paragraph" />
-          <Accordion title="Unit 2" paragraph="A new Paragrapher" />
         </div>
       </div>
 
@@ -96,6 +121,7 @@ export default function CourseBoard() {
           </div>
 
         </div>  
+        <AccordionContent />
 
         <Logout />
         <Footer />

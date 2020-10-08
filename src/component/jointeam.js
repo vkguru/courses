@@ -22,7 +22,7 @@ function Jointeam() {
 
       <section className="section sub">
         <div className="subc-text">
-          <p>Subscribe to gain more knowledge get free tools, ebooks and resources for free in your mail</p>
+          <p>Interested in getting updates, free tools and videos on how to make your offerings more innovative and customer-friendly?</p>
           <form>
             <input type="email" placeholder="username@email.com" className="form-control"/>
             <input type="submit" value="Subscribe" className="submit"/>

@@ -10,16 +10,16 @@ function Intro() {
     <section className="section int">
       <div className="intro-hd">
         <h2>
-          Prototyping for Businesses Masterclass is brought to you by DODO
+          Prototyping for Businesses and Teams: The Masterclass
         </h2>
       </div>
 
       <div className="intro-sub">
         <h3>What will you gain</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id nec augue aliquam a lacus, sed massa. Vestibulum, nec sit malesuada urna, fames pulvinar sodales magna pellentesque. Tristique ultrices ut leo gravida posuere ut eget at. Quis a diam sed nunc. Sit eget dui sit aliquet.</p>
+        <p>Bringing a fully developed offering to the market is incredibly cost intensive for any company or team. With the huge amount of resources spent, you want to de-risk any potential mishaps surrounding your product or service’ entry and success in the market, you also want to bring a product to the market that customers enjoy using and has competitive advantage. This is where prototyping comes in. Prototyping goes beyond just testing a digital product, you can test business models, value propositions, price points and more. In this Masterclass we will show you how?</p>
 
-        <p>Nisl laoreet odio turpis pharetra ac non. Nulla etiam quis justo massa pulvinar eget. Imperdiet scelerisque aliquam, aliquet auctor id interdum commodo cras. Urna, tellus elit volutpat velit. Netus mi cras venenatis id cras arcu. Sed eget gravida nunc venenatis, in. Id porta aliquam a amet, fames sit tortor nibh egestas. Tellus posuere augue sit eu nisl. Eu praesent quam semper volutpat a vestibulum pulvinar.Tellus facilisi nisl lectus lacus, purus. Placerat velit morbi ridiculus sit amet.</p>
+        <p>We’ve taken great detail to design this Masterclass for teams and entrepreneurs that seek real actionable data to back their ideas or improve their products performance in the market.</p>
       </div>
 
       <div className="heading">
@@ -30,6 +30,16 @@ function Intro() {
         <img src={Union} alt="Union Bank Logo" />
         <img src={Firstbank} alt="First Bank Logo" />
         <img src={DesignSprint} alt="Design Sprint" />
+      </div>
+
+      <div className="intro-sub">
+
+        <p>In this course you will learn what goes into building a prototype for anything you want to test for, from your value proposition to a real service. We will cover how to build prototypes to learn from your audience and answer questions you have around your offering. You will learn to test the right way in order to get real information that you will be able to use to improve on your offering before launching into market.</p>
+
+        <p>At the end of this class, you and your team will be able to build rough prototypes, testing with real customers and iterate for more successful products.</p>
+
+        <p>To hire a Design Research and Strategy agency to carry out this session would rack up millions in cost. Take advantage of our early bird offer of N5,000 complete with intimate videos, free worksheets and tools.</p>
+        
       </div>
 
       <div className="cta">
