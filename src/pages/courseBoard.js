@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import NavDark from '../component/navbar-dark'
 import videoPreload from '../asset/img/video-preload.jpg';
 import Footer from '../component/footer';
@@ -7,13 +7,6 @@ import PlaylistContent from '../component/playlistContent';
 
 export default function CourseBoard() {
 
-  const [accordionIsOpen, setAccordionIsOpen] = useState(() => false);
-
-  let panelClass = 'panel';
-
-  if(accordionIsOpen) {
-    panelClass += 'plk'
-  }
 
   if(loggedUser && verCode ) {
     console.log('courses');
@@ -28,7 +21,7 @@ export default function CourseBoard() {
 
       <div className="cr-progress">
 
-        <h3>Your Progress</h3>
+        <h3>Track Your Progress</h3>
         
         <div className="cr-hlder">
 

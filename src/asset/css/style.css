@@ -1136,6 +1136,7 @@ button.active {
 .course-board {
   width: 100%;
   display: flex;
+  background: #f9f9f9;
 }
 
 .vid-res {
@@ -1345,11 +1346,13 @@ button.active {
 .course-fit {
   height: 80vh;
   overflow: scroll;
+  background: #eeeeee;
 }
 
 .vid-res img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 1280px) {
