@@ -1187,7 +1187,7 @@ button.active {
   content: "";
   display: block;
   height: 2px;
-  width: 13%;
+  width: 14%;
   background-color: #fcc519;
   position: absolute;
   top: 11.5rem;
@@ -1333,6 +1333,23 @@ button.active {
   height: 2px;
   width: 100%;
   margin-top: 1rem;
+}
+
+.cr-progress h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Gilroy SemiBold";
+  padding: 20px 0;
+}
+
+.course-fit {
+  height: 80vh;
+  overflow: scroll;
+}
+
+.vid-res img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1280px) {

@@ -1,29 +1,11 @@
 import React, {useState} from 'react';
 import NavDark from '../component/navbar-dark'
-import TabContent from '../component/tabContent';
 import videoPreload from '../asset/img/video-preload.jpg';
 import Footer from '../component/footer';
-import Logout from './logout';
 import { loggedUser,  verCode} from '../component/session';
-import AccordionContent from '../component/accordionContent';
+import PlaylistContent from '../component/playlistContent';
 
 export default function CourseBoard() {
-
-  let acc = document.querySelectorAll("accordion");
-  let i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-
-      let panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
 
   const [accordionIsOpen, setAccordionIsOpen] = useState(() => false);
 
@@ -45,6 +27,8 @@ export default function CourseBoard() {
       <NavDark />
 
       <div className="cr-progress">
+
+        <h3>Your Progress</h3>
         
         <div className="cr-hlder">
 
@@ -91,39 +75,12 @@ export default function CourseBoard() {
 
           </div>
 
-          <div className="acc-holder">
-            <button className="accordion" onClick={() => setAccordionIsOpen(!accordionIsOpen)}>Introduction</button>
-            <div className={panelClass}>
-              <p>History/About</p>
-              <p>Why prototype? Why test?</p>
-              <p>Types of Prototypes</p>
-            </div>
+          <div className="course-fit">
+            <PlaylistContent />
           </div>
-
-          <div className="acc-holder">
-            <button className="accordion" onClick={() => setAccordionIsOpen(!accordionIsOpen)}>Introduction</button>
-            <div className={panelClass}>
-              <p>History/Aboutjhvhv</p>
-              <p>Why prototype? Why test?</p>
-              <p>Types of Prototypes</p>
-            </div>
-          </div>
-
+          
         </div>
-      </div>
-
-      <div className="video-preview">
-
-          <div className="tab">
-
-            <TabContent />
-
-          </div>
-
-        </div>  
-        <AccordionContent />
-
-        <Logout />
+      </div> 
         <Footer />
     </section>
   )

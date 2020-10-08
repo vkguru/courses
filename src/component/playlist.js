@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Chevron from '../component/chrevon';
 
-export default function Accordion(props) {
+export default function Playlist(props) {
 
   const [setActive, setActiveState] = useState("");
   const [setHeight, setHeightState] = useState("0px");
