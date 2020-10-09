@@ -1150,6 +1150,7 @@ button.active {
 .course-board-menu {
   width: 28%;
   background-color: #f9f9f9;
+  border-left: 2px solid #eee;
 }
 
 .cr-progress {
@@ -1227,6 +1228,7 @@ button.active {
   font-size: 17px;
   font-family: "Gilroy SemiBold";
   cursor: pointer;
+  border: 1px solid #e8e8e8;
 }
 
 .accordion:hover {

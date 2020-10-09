@@ -2,7 +2,7 @@ import React from 'react';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import image from '../asset/img/holder.jpg';
+import Susan from '../asset/img/susan.jpg';
 import Omotayo from '../asset/img/Omotayo.png'
 import Steph from '../asset/img/Steph.png'
 
@@ -15,7 +15,7 @@ function Instructor() {
       <div className="courses-instructors">
 
         <div className="instructor">
-          <img src={image} alt="Susan Onigbinde" />
+          <img src={Susan} alt="Susan Onigbinde" />
 
           <div className="instructor-detail">
 
