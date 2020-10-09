@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactPlayer from 'react-player/lazy';
 import { Link } from 'react-router-dom';
-import videoPreload from '../asset/img/video-preload.jpg';
 import AccordionContent from '../component/accordionContent';
+import poster from '../asset/img/courses-banner.jpg';
 
 function Masterclassin() {
   return (
@@ -9,7 +10,18 @@ function Masterclassin() {
       <h2 className="sub-grey-heading">What's Inside This Masterclass</h2>
 
         <div className="video-preview">
-          <img src={videoPreload} alt="video preview" />
+          <ReactPlayer 
+            url='https://dodo.ng/asset/video/Services.mp4' 
+            width='100%'
+            height='100%'
+            controls={true}
+            config={{ file: { 
+              attributes: {
+                controlsList: 'nodownload',
+                poster: poster
+              }
+            }}}
+          />
 
           <div className="row">
 
