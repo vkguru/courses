@@ -67,7 +67,7 @@ function Cart() {
         </div>
 
         <div className="prod-price">
-          <h3>NGN 20,000</h3>
+          <h3>NGN 5,000</h3>
           <p>Team discount reflects as quantity increases</p>
         </div>
 
