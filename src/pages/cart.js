@@ -80,9 +80,9 @@ function Cart() {
 
       <div className="prod-pricing">
         <div className="pricing-container">
-          <p>Subtotal: <span>NGN 20,000</span></p>
-          <p>Tax: <span>NGN 1000</span></p>
-          <p id="total">Total <span>NGN 21,000</span></p>
+          <p>Subtotal: <span>NGN 5,000</span></p>
+          <p>Subcharge: <span>-</span></p>
+          <p id="total">Total <span>NGN 5,000</span></p>
           {/* <Link to='/register' className="courses-link b-nxt">Checkout</Link> */}
           <button onClick={() => setmodalIsOpen(true)} className="courses-link b-nxt">Checkout</button>
         </div>
