@@ -48,6 +48,7 @@ p, ul, li {
 .menu {
   display: flex;
   margin: auto 0;
+  justify-content: space-evenly;
 }
 
 .menu-text {
@@ -1381,6 +1382,24 @@ button.active {
   color: var(--courses-dark-gray);
   border: none;
   cursor: pointer;
+}
+
+#fr {
+  background-color: #c2c2c1;
+  padding: 7px 12px;
+  border-radius: 100%;
+}
+
+.logout {
+  background-color: transparent;
+  border: none;
+  font-family: "Gilroy SemiBold";
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.menu h3 {
+  padding-right: 20px;
 }
 
 @media screen and (max-width: 1280px) {

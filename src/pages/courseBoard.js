@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavDark from '../component/navbar-dark';
+import NavDarkLogin from '../component/navbarDark-login';
 import Footer from '../component/footer';
 import { loggedUser,  verCode} from '../component/session';
 import PlaylistContent from '../component/playlistContent';
@@ -19,7 +19,7 @@ export default function CourseBoard() {
   return (
     <section className="section">
 
-      <NavDark />
+      <NavDarkLogin />
 
       <div className="cr-progress">
 
@@ -56,9 +56,9 @@ export default function CourseBoard() {
 
       </div>
 
-      <div className="course-board">
-
+      <div className="course-board">     
         <div className="vid-res">
+
           <ReactPlayer 
               url='https://dodo.ng/asset/video/Services.mp4' 
               width='100%'

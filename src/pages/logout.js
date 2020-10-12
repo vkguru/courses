@@ -28,7 +28,7 @@ export default class Logout extends Component {
   render() {
     return (
       <>
-        <button onClick={this.handleSubmit}>Logout</button>
+        <button onClick={this.handleSubmit} className="logout">Logout</button>
       </>
     )
   }
