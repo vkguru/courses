@@ -6,6 +6,7 @@ import { loggedUser,  verCode} from '../../component/session';
 import PlaylistContent from '../../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
 import poster from '../../asset/img/courses-banner.jpg';
+import './cr.css';
 
 export default function CourseTwo() {
 
