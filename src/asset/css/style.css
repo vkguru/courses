@@ -1141,6 +1141,7 @@ button.active {
 
 .vid-res {
   width: 72%;
+  padding-bottom: 8rem;
 }
 
 .vid-res img {
@@ -1301,7 +1302,14 @@ button.active {
   padding: 18px;
 }
 
-.accordion__text p svg {
+.accordion__link {
+  text-decoration: none;
+  color: var(--courses-dark-gray);
+  opacity: 1;
+}
+
+.accordion__text p svg,
+.accordion__link svg {
   vertical-align: middle;
   margin-right: 1.2rem;
 }
@@ -1355,6 +1363,24 @@ button.active {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+#next {
+  text-align: right;
+  margin: 2rem 2rem 0 0;
+}
+
+.next {
+  /* width: 30%; */
+  padding: 15px 30px;
+  background-color: var(--courses-yellow);
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Gilroy SemiBold';
+  text-decoration: none;
+  color: var(--courses-dark-gray);
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {

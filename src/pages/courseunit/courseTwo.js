@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavDark from '../component/navbar-dark';
-import Footer from '../component/footer';
-import { loggedUser,  verCode} from '../component/session';
-import PlaylistContent from '../component/playlistContent';
+import NavDark from '../../component/navbar-dark';
+import Footer from '../../component/footer';
+import { loggedUser,  verCode} from '../../component/session';
+import PlaylistContent from '../../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
-import poster from '../asset/img/courses-banner.jpg';
+import poster from '../../asset/img/courses-banner.jpg';
 
-export default function CourseBoard() {
+export default function CourseTwo() {
 
 
   if(loggedUser && verCode ) {
@@ -59,6 +59,7 @@ export default function CourseBoard() {
       <div className="course-board">
 
         <div className="vid-res">
+          {/* {props.title} */}
           <ReactPlayer 
               url='https://dodo.ng/asset/video/Services.mp4' 
               width='100%'
