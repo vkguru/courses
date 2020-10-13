@@ -69,7 +69,7 @@ export default function CourseTwo() {
       <div className="course-board">
 
         <div className="vid-res">
-          {/* {props.title} */}
+
           <ReactPlayer 
               url='https://dodo.ng/asset/video/Services.mp4' 
               width='100%'
@@ -85,7 +85,7 @@ export default function CourseTwo() {
             />
 
             <div id="next">
-              <Link to={isComplete? "/course-board/2" : "/course-board" } className={isComplete? "is-complete" : "not-complete"}>Next</Link>
+              <Link to={isComplete? "/course-board/3" : "/course-board/2" } className={isComplete? "is-complete" : "not-complete"}>Next</Link>
             </div>
         </div>
 
