@@ -1371,8 +1371,7 @@ button.active {
   margin: 2rem 2rem 0 0;
 }
 
-.next {
-  /* width: 30%; */
+.is-complete {
   padding: 15px 30px;
   background-color: var(--courses-yellow);
   border-radius: 5px;
@@ -1382,6 +1381,18 @@ button.active {
   color: var(--courses-dark-gray);
   border: none;
   cursor: pointer;
+}
+
+.not-complete {
+  padding: 15px 30px;
+  background-color: #ebd389;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Gilroy SemiBold';
+  text-decoration: none;
+  color: #7a7a7a;
+  border: none;
+  cursor: not-allowed;
 }
 
 #fr {

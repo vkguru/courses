@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavDarkLogin from '../../component/navbarDark-login';
 import Footer from '../../component/footer';
@@ -15,6 +15,15 @@ export default function CourseTwo() {
     console.log('courses');
   } else {
     window.location = '/login'
+  }
+
+  const [isComplete, setIsComplete] = useState(false);
+
+  const handleComplete = ({played}) => {
+    console.log(played)
+    if(played >= 0.8 & !isComplete) {
+      setIsComplete(true);
+    }
   }
 
   return (
@@ -72,10 +81,11 @@ export default function CourseTwo() {
                   poster: poster
                 }
               }}}
+              onProgress={handleComplete}
             />
 
             <div id="next">
-              <Link to="/course-board/2" className="next">Next</Link>
+              <Link to={isComplete? "/course-board/2" : "/course-board" } className={isComplete? "is-complete" : "not-complete"}>Next</Link>
             </div>
         </div>
 
