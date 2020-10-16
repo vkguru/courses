@@ -6,6 +6,7 @@ import { loggedUser,  verCode} from '../component/session';
 import PlaylistContent from '../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
 import poster from '../asset/img/courses-banner.jpg';
+import Progress from '../component/progress';
 import './courseunit/courseTwo';
 
 export default function CourseBoard() {
@@ -30,44 +31,11 @@ export default function CourseBoard() {
 
       <NavDarkLogin />
 
-      <div className="cr-progress">
-
-        <h3>Track Your Progress</h3>
-        
-        <div className="cr-hlder">
-
-          <div className="cr-level">
-            <div className="cr-level-point">0</div>
-            <p className="cr-level-text">Introduction</p>
-          </div>
-
-          <div className="cr-level">
-            <div className="cr-level-point">1</div>
-            <p className="cr-level-text">Building and planning</p>
-          </div>
-
-          <div className="cr-level">
-            <div className="cr-level-point">2</div>
-            <p className="cr-level-text">Testing and Learning</p>
-          </div>
-
-          <div className="cr-level">
-            <div className="cr-level-point">3</div>
-            <p className="cr-level-text">Iterating and Improving</p>
-          </div>
-
-          <div className="cr-level">
-            <div className="cr-level-point">4</div>
-            <p className="cr-level-text">Conclusion</p>
-          </div>
-
-        </div>
-
-      </div>
+      <Progress />
 
       <div className="course-board">     
         <div className="vid-res">
-
+        <div className="layer"></div>
           <ReactPlayer 
               url='https://dodo.ng/asset/video/Services.mp4' 
               width='100%'
@@ -84,7 +52,6 @@ export default function CourseBoard() {
 
             <div id="next">
               <Link to={isComplete? "/course-board/2" : "/course-board" } className={isComplete? "is-complete" : "not-complete"}>Next</Link>
-              {/* <button className="next" onClick={next} disabled={isComplete? false : true}>Next</button> */}
             </div>
         </div>
 
