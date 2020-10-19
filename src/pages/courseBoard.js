@@ -34,7 +34,7 @@ export default function CourseBoard() {
     stored = 0
   }
 
-  const currentProgress = progressOne + stored;
+  const currentProgress = Number(progressOne) + Number(stored);
   console.log(currentProgress);
 
   return (
