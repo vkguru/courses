@@ -1,6 +1,5 @@
 import React from 'react';
 import productTeam from '../asset/img/product-teams.jpg';
-// import innovation from '../asset/img/innovatio-and-strategy.jpg';
 import entrepreneur from '../asset/img/entrepreneur.jpg';
 
 function Masterclass() {
