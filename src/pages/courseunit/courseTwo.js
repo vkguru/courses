@@ -18,21 +18,35 @@ export default function CourseTwo() {
     window.location = '/login'
   }
 
+  // const stored = localStorage.getItem('storage')
+  // console.log(stored);
+
   const [isComplete, setIsComplete] = useState(false);
+
+  let progressOne = localStorage.getItem('lesxx1');
+  let stored = localStorage.getItem('storage');
 
   const handleComplete = ({played}) => {
     console.log(played)
     if(played >= 0.8 & !isComplete) {
       setIsComplete(true);
+      localStorage.setItem('storage', 8.3)
     }
   }
+
+  if(stored === null) {
+    stored = 0
+  }
+
+  const currentProgress = Number(progressOne) + Number(stored);
+  console.log(currentProgress);
 
   return (
     <section className="section">
 
       <NavDarkLogin />
 
-      <Progress />
+      <Progress width={currentProgress} />
 
       <div className="course-board">
 
@@ -53,7 +67,7 @@ export default function CourseTwo() {
             />
 
             <div id="next">
-              <Link to={isComplete? "/course-board/3" : "/course-board/2" } className={isComplete? "is-complete" : "not-complete"}>Next</Link>
+              <Link to={stored? "/course-board/3" : "/course-board/2" } className={stored? "is-complete" : "not-complete"}>Next</Link>
             </div>
         </div>
 

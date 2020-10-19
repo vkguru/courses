@@ -2,10 +2,6 @@ import React from 'react'
 
 export default function Progress(props) {
 
-  const style = {
-    width: '10%'
-  }
-
   return (
     <>
 
@@ -19,7 +15,7 @@ export default function Progress(props) {
 
         <div className="start-point"></div>
 
-          <div className="cr-progress-fill" style={style}></div>
+          <div className="cr-progress-fill" style={{width:props.width+'%'}}></div>
 
         </div>
 
