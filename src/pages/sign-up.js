@@ -66,6 +66,7 @@ export default class Signup extends Component {
       
       if(validInput === true) {
         window.location = "/checkout";
+        localStorage.setItem('date_created', data.user.created_at.slice(0, 10) );
         localStorage.setItem('email_', this.state.email );
         sessionStorage.setItem('email', this.state.email );
         sessionStorage.setItem('_cctok', data.access_token );
@@ -91,7 +92,7 @@ export default class Signup extends Component {
           </div>
 
           <div className="form-group-reg">
-            <button type="submit" className="bfl submit">Submit</button>
+            <button type="submit" className="bfl submit">{this.validInput? 'Loading...' : 'Submit'}</button>
           </div>
 
 

@@ -1,41 +1,43 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavDarkLogin from '../component/navbarDark-login';
-import Footer from '../component/footer';
-import { loggedUser,  verCode} from '../component/session';
-import PlaylistContent from '../component/playlistContent';
+import NavDarkLogin from '../../component/navbarDark-login';
+import Footer from '../../component/footer';
+import { loggedUser,  verCode} from '../../component/session';
+import PlaylistContent from '../../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
-import poster from '../asset/img/courses-banner.jpg';
-import Progress from '../component/progress';
-import DateCal from '../component/date';
-import './courseunit/courseTwo';
+import poster from '../../asset/img/courses-banner.jpg';
+import Progress from '../../component/progress';
+import DateCal from '../../component/date';
+import './cr.css';
 
-export default function CourseBoard() {
+export default function CourseThree() {
+
 
   if(loggedUser && verCode ) {
     console.log('courses');
   } else {
-    window.location = '/login';
+    window.location = '/login'
   }
 
   const [isComplete, setIsComplete] = useState(false);
 
   let progressOne = localStorage.getItem('lesxx1');
   let stored = localStorage.getItem('storage');
+  let progressThree = localStorage.getItem('thirdkcnjc');
 
   const handleComplete = ({played}) => {
     console.log(played)
     if(played >= 0.8 & !isComplete) {
       setIsComplete(true);
-      localStorage.setItem('lesxx1', 8.3)
+      localStorage.setItem('thirdkcnjc', 8.3)
     }
   }
 
-  if(stored === null) {
-    stored = 0
+  if(progressThree === null) {
+    progressThree = 0
   }
 
-  const currentProgress = Number(progressOne) + Number(stored);
+  const currentProgress = Number(progressOne) + Number(stored) + Number(progressThree);
   console.log(currentProgress);
 
   return (
@@ -47,9 +49,10 @@ export default function CourseBoard() {
 
       <Progress width={currentProgress} />
 
-      <div className="course-board">     
+      <div className="course-board">
+
         <div className="vid-res">
-        <div className="layer"></div>
+
           <ReactPlayer 
               url='https://dodo.ng/asset/video/Services.mp4' 
               width='100%'
@@ -65,7 +68,7 @@ export default function CourseBoard() {
             />
 
             <div id="next">
-              <Link to={progressOne = true? "/course-board/2" : "/course-board" } className={progressOne = true? "is-complete" : "not-complete"}>Next</Link>
+              <Link to={progressThree? "/course-board/4" : "/course-board/3" } className={progressThree? "is-complete" : "not-complete"}>Next</Link>
             </div>
         </div>
 

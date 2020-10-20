@@ -8,6 +8,7 @@ import Checkout from  './pages/checkout';
 import Success from './pages/success';
 import CourseBoard from './pages/courseBoard';
 import CourseTwo from './pages/courseunit/courseTwo';
+import CourseThree from './pages/courseunit/courseThree';
 import Signup from './pages/sign-up';
 import Login from './pages/login';
 import Teams from './pages/teams'
@@ -25,6 +26,7 @@ const routing = (
       {/* { loggedUser && verCode? <Route path="/course-board" component={CourseBoard} /> :  <Route path="/login" component={Login} />} */}
       <Route exact path="/course-board" component={CourseBoard} />
       <Route exact path="/course-board/2" component={CourseTwo} />
+      <Route exact path="/course-board/3" component={CourseThree} />
       <Route path="/teams" component={Teams} />
       <Route path="/register" component={Signup} />
       <Route path="/login" component={Login} />

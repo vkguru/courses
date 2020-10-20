@@ -7,6 +7,7 @@ import PlaylistContent from '../../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
 import poster from '../../asset/img/courses-banner.jpg';
 import Progress from '../../component/progress';
+import DateCal from '../../component/date';
 import './cr.css';
 
 export default function CourseTwo() {
@@ -17,9 +18,6 @@ export default function CourseTwo() {
   } else {
     window.location = '/login'
   }
-
-  // const stored = localStorage.getItem('storage')
-  // console.log(stored);
 
   const [isComplete, setIsComplete] = useState(false);
 
@@ -45,6 +43,8 @@ export default function CourseTwo() {
     <section className="section">
 
       <NavDarkLogin />
+
+      <DateCal />
 
       <Progress width={currentProgress} />
 

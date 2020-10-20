@@ -1424,6 +1424,21 @@ button.active {
   margin-top: -5px;
 }
 
+.notice {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 4rem 0 2rem;
+    font-family: 'Gilroy SemiBold'
+}
+
+.exp-date {
+  border: 2px dashed var(--courses-yellow);
+  width: 30%;
+  margin: auto;
+  padding: 10px 0;
+}
+
 @media screen and (max-width: 1280px) {
   .intro-hd {
     width: 45%;
