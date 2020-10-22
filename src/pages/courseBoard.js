@@ -65,7 +65,7 @@ export default function CourseBoard() {
             />
 
             <div id="next">
-              <Link to={progressOne = true? "/course-board/2" : "/course-board" } className={progressOne = true? "is-complete" : "not-complete"}>Next</Link>
+              <Link to="/course-board/2" className="is-complete">Next</Link>
             </div>
         </div>
 

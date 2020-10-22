@@ -17,7 +17,7 @@ export default function Provider() {
       // phone,
     },
     publicKey,
-    text: "Pay Now",
+    text: "Pay Now to Join Masterclass",
     onSuccess: () => {},
     onClose: () => {},
   }
