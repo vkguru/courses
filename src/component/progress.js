@@ -15,8 +15,21 @@ export default function Progress(props) {
 
         <div className="start-point"></div>
 
-          <div className="cr-progress-fill" style={{width:props.width+'%'}}></div>
+          <div className="cr-progress-gr">
+            <div className="cr-progress-fill" style={{width:props.width+'%'}}></div>
+          </div>
+ 
+          <div className="cr-progress-gr">
+            <div className="cr-progress-fill" style={{width:props.widthOne+'%'}}></div>
+          </div>
 
+          <div className="cr-progress-gr">
+            <div className="cr-progress-fill" style={{width:props.widthTwo+'%'}}></div>
+          </div>
+
+          <div className="cr-progress-gr">
+            <div className="cr-progress-fill" style={{width:props.widthThree+'%'}}></div>
+          </div>
         </div>
 
         <div className="cr-hlder">

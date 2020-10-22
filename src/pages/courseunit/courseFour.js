@@ -10,7 +10,7 @@ import Progress from '../../component/progress';
 import DateCal from '../../component/date';
 import './cr.css';
 
-export default function CourseThree() {
+export default function CourseTwo() {
 
 
   if(loggedUser && verCode ) {
@@ -31,17 +31,16 @@ export default function CourseThree() {
     console.log(played)
     if(played >= 0.8 & !isComplete) {
       setIsComplete(true);
-      localStorage.setItem('thirdkcnjc', 7)
+      localStorage.setItem('prfour', 8.3)
     }
   }
 
-  // if(progressThree === null) {
-  //   progressThree = 0
-  // }
 
   const currentProgress = Number(progressOne) + Number(stored) + Number(progressThree);
   const currentProgressOne = Number(progressFour);
   console.log(currentProgress);
+  console.log(currentProgressOne);
+  
 
   return (
     <section className="section">
@@ -71,7 +70,7 @@ export default function CourseThree() {
             />
 
             <div id="next">
-              <Link to={progressThree? "/course-board/4" : "/course-board/3" } className={progressThree? "is-complete" : "not-complete"}>Next</Link>
+              <Link to="/course-board/5" className="is-complete">Next</Link>
             </div>
         </div>
 

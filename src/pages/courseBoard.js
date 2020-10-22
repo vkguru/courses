@@ -22,20 +22,24 @@ export default function CourseBoard() {
 
   let progressOne = localStorage.getItem('lesxx1');
   let stored = localStorage.getItem('storage');
+  let progressThree = localStorage.getItem('thirdkcnjc');
+
+  let progressFour = localStorage.getItem('prfour');
 
   const handleComplete = ({played}) => {
     console.log(played)
     if(played >= 0.8 & !isComplete) {
       setIsComplete(true);
-      localStorage.setItem('lesxx1', 8.3)
+      localStorage.setItem('lesxx1', 7)
     }
   }
 
-  if(stored === null) {
-    stored = 0
-  }
+  // if(stored === null) {
+  //   stored = 0
+  // }
 
-  const currentProgress = Number(progressOne) + Number(stored);
+  const currentProgress = Number(progressOne) + Number(stored) + Number(progressThree);
+  const currentProgressOne = Number(progressFour)
   console.log(currentProgress);
 
   return (
@@ -45,7 +49,7 @@ export default function CourseBoard() {
 
       <DateCal />
 
-      <Progress width={currentProgress} />
+      <Progress width={currentProgress} widthOne={currentProgressOne}/>
 
       <div className="course-board">     
         <div className="vid-res">
