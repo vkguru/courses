@@ -20,7 +20,7 @@ function Masterclass() {
         <div className="crd_ lrt">
           <img src={entrepreneur} alt="Product Teams"/>
           <div className="lrt-txt">
-            <h4>Entrepreneurs</h4>
+            <h4>ENTREPRENEURS</h4>
             <p>Business owners, entrepreneurs, who want to bring a solution, product or experience to the market, and are seeking to de-risk their investment by gaining knowledge of their users.</p>
           </div>
         </div>
