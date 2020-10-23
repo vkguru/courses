@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NavDarkLogin from '../component/navbarDark-login';
 import Footer from '../component/footer';
 import { loggedUser,  verCode} from '../component/session';
@@ -63,13 +64,14 @@ export default function CourseBoard() {
               }}}
               onProgress={handleComplete}
             />
-
-            <div id="next">
               
-              <a href="/course-board/2" className="is-complete" download>
-                Download PDF
-              </a>
+            <div id="next">
+                <a href="text.pdf" className="is-complete" download>
+                  Download PDF
+                </a>
+              <Link to="/course-board/2" className="is-complete">Next</Link>
             </div>
+
         </div>
 
         <div className="course-board-menu">

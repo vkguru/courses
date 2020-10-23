@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NavDarkLogin from '../../component/navbarDark-login';
 import Footer from '../../component/footer';
 import { loggedUser,  verCode} from '../../component/session';
@@ -67,11 +67,17 @@ export default function CourseTwo() {
             />
 
             <div id="next">
-              {/* <Link to="/course-board/5" className="is-complete">Next</Link> */}
+
+              <Link to="/course-board/3" className="is-complete">Before</Link>
+
               <a href="text.pdf" className="is-complete" download>
                 Download PDF
               </a>
+              
+              <Link to="/course-board/5" className="is-complete">Next</Link>
+              
             </div>
+
         </div>
 
         <div className="course-board-menu">
