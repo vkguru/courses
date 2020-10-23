@@ -69,7 +69,7 @@ export default function CourseTwo() {
 
               {/* <Link to={stored? "/course-board/3" : "/course-board/2" } className={stored? "is-complete" : "not-complete"}>Next</Link> */}
               <div id="next">
-                <Link to="/course-board/1" className="is-complete">Before</Link>
+                <Link to="/course-board" className="is-complete">Before</Link>
                   <a href="text.pdf" className="is-complete" download>
                     Download PDF
                   </a>
