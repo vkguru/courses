@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import NavDarkLogin from '../../component/navbarDark-login';
 import Footer from '../../component/footer';
 import { loggedUser,  verCode} from '../../component/session';
@@ -7,7 +7,6 @@ import PlaylistContent from '../../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
 import poster from '../../asset/img/courses-banner.jpg';
 import Progress from '../../component/progress';
-import DateCal from '../../component/date';
 import './cr.css';
 
 export default function CourseTwo() {
@@ -47,8 +46,6 @@ export default function CourseTwo() {
 
       <NavDarkLogin />
 
-      <DateCal />
-
       <Progress width={currentProgress} widthOne={currentProgressOne} />
 
       <div className="course-board">
@@ -70,7 +67,10 @@ export default function CourseTwo() {
             />
 
             <div id="next">
-              <Link to="/course-board/5" className="is-complete">Next</Link>
+              {/* <Link to="/course-board/5" className="is-complete">Next</Link> */}
+              <a href="text.pdf" className="is-complete" download>
+                Download PDF
+              </a>
             </div>
         </div>
 

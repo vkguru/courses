@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import NavDarkLogin from '../component/navbarDark-login';
 import Footer from '../component/footer';
 import { loggedUser,  verCode} from '../component/session';
@@ -7,7 +6,6 @@ import PlaylistContent from '../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
 import poster from '../asset/img/courses-banner.jpg';
 import Progress from '../component/progress';
-import DateCal from '../component/date';
 import './courseunit/courseTwo';
 
 export default function CourseBoard() {
@@ -47,8 +45,6 @@ export default function CourseBoard() {
 
       <NavDarkLogin />
 
-      <DateCal />
-
       <Progress width={currentProgress} widthOne={currentProgressOne}/>
 
       <div className="course-board">     
@@ -69,7 +65,10 @@ export default function CourseBoard() {
             />
 
             <div id="next">
-              <Link to="/course-board/2" className="is-complete">Next</Link>
+              
+              <a href="/course-board/2" className="is-complete" download>
+                Download PDF
+              </a>
             </div>
         </div>
 

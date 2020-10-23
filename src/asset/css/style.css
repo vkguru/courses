@@ -51,6 +51,14 @@ p, ul, li {
   justify-content: space-evenly;
 }
 
+.menu p {
+  padding-right: 30px;
+}
+
+.menu p svg {
+  cursor: pointer;
+}
+
 .menu-text {
   color: #fff;
   text-decoration: none;
@@ -79,6 +87,14 @@ p, ul, li {
 .menu-text:hover:after {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.notification {
+  width: 30%;
+  background: #f9f9f9;
+  margin: -30px 30px 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 1px #00000012;
 }
 
 .dark {
@@ -1358,7 +1374,7 @@ button.active {
 }
 
 #next {
-  text-align: right;
+  text-align: center;
   margin: 2rem 2rem 0 0;
 }
 
@@ -1430,13 +1446,16 @@ button.active {
     width: 100%;
     margin: auto;
     text-align: center;
-    padding: 4rem 0 2rem;
+    padding: 1rem 0 1rem;
     font-family: 'Gilroy SemiBold'
 }
 
+.notice h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
 .exp-date {
-  border: 2px dashed var(--courses-yellow);
-  width: 30%;
   margin: auto;
   padding: 10px 0;
 }
@@ -1444,6 +1463,18 @@ button.active {
 .cr-progress-gr {
   background-color: #c4c4c4;
   width: 25%;
+}
+
+#dl {
+  display: block;
+  transition: .5s ease-in-out;
+  position: absolute;
+  right: 0;
+}
+
+#dn { 
+  display: none;
+  transition: .5s ease-in-out;
 }
 
 @media screen and (max-width: 1280px) {
