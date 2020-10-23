@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoDark from '../asset/img/logoo.png';
+import logoDark from '../asset/img/DODO-Workshops-logo.png';
 // import { loggedUser,  verCode} from './session';
 
  function NavDark() {
