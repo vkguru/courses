@@ -18,7 +18,9 @@ export default function Provider() {
     },
     publicKey,
     text: "Pay Now to Join Masterclass",
-    onSuccess: () => {},
+    onSuccess: () => {
+      window.location = '/success'
+    },
     onClose: () => {},
   }
 
