@@ -29,7 +29,7 @@ export default function Teams() {
 
             <div className="form-group-reg">
               <label>What Other Courses Around Prototype Will Your Team Love To Learn?</label>
-              <input type="text" className="pay-form-control" name="password_confirmation" />
+              <textarea className="pay-form-control" rows="5"></textarea>
             </div>
 
             <div className="form-group-reg">
