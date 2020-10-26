@@ -854,6 +854,8 @@ ul.vid-list li {
 
 #bg-grey {
   background-color: var(--light-gray);
+  height: 100vh;
+  position: fixed;
 }
 
 .content h3 {
@@ -1505,6 +1507,7 @@ button.active {
 
   .crd_ {
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .lrt-txt {
@@ -1531,6 +1534,76 @@ button.active {
   .subc-text {
     width: 60%;
   }
+
+  .cart-prod {
+    flex-direction: column;
+  }
+
+  .cart-prod-detail {
+    width: 90%;
+    margin: auto;
+  }
+
+  .prod-price {
+    width: 90%;
+    margin: auto;
+  }
+
+  .prod-pricing {
+    justify-content: center;
+  }
+
+  .pricing-container {
+    width: 100%;
+  }
+
+  .del {
+    display: none;
+  }
+
+  .prod-img {
+    text-align: left;
+  }
+
+  .success-modal {
+    width: 90%;
+    margin-top: 4rem;
+  }
+
+  .formHolder {
+    width: 70%;
+  }
+
+  .course-board {
+    flex-direction: column;
+  }
+
+  .vid-res {
+    width: 100%;
+  }
+
+  .course-board-menu {
+    width: 100%;
+  }
+
+  .banner-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .brands img {
+    padding: 0 20px;
+  }
+
+  .lrt-txt {
+    width: 90%;
+    padding: 0 10px;
+    height: 200px;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1547,4 +1620,204 @@ button.active {
     font-size: 1.3rem;
     margin-top: -10px;
   }
+
+  .cart-prod-detail {
+    flex-direction: column;
+  }
+
+  .prod-img {
+    text-align: center;
+  }
+
+  .prod-img {
+    width: 100%;
+  }
+
+  .prod-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .prod-price {
+    text-align: center;
+  }
+
+  .prod-price p {
+    width: 100%;
+  }
+
+  .formHolder {
+    width: 70%;
+  }
+
+  .form-group-reg .pay-form-control {
+    width: 80%;
+  }
+
+  .checkout {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .checkout-form {
+    width: 90%;
+    margin: auto;
+  }
+
+  .checkout-form h3 {
+    text-align: center;
+  }
+
+  .checkout-pay {
+    justify-content: center;
+  }
+
+  .pay-btn:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .py {
+    width: 97%;
+  }
+
+  .checkout-product{
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .c-p-d {
+    width: 100%;
+  }
+
+  .tx-lr {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .prod-text-ck {
+    width: 100%;
+  }
+
+  .fl {
+    width: 80%;
+    margin: auto;
+  }
+
+  .is-complete {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+
+  .menu h3, .menu p {
+    display: none;
+  }
+
+  .cr-progress {
+    display: none;
+  }
+
+  .vid-btn svg {
+    display: none;
+  }
+
+  .banner-text {
+    top: 37%;
+  }
+
+  .brands {
+    flex-direction: column;
+  }
+
+  .brands img {
+    padding: 1rem 0;
+  }
+
+  .cr-slide {
+    width: 65%;
+  }
+
+  .courses-instructors {
+    width: 90%;
+  }
+
+  .cr-slide-text {
+    text-align: center;
+  }
+
+  .cr-testifr {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cr-testifr img {
+    margin: auto;
+  }
+
+  .subc-text {
+    width: 85%;
+  }
+
+  .subc-text form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-control {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .submit {
+    width: 100%; 
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  .sub h2 {
+    font-size: 1.5rem;
+  }
+
+  .lrt-txt {
+    width: 85%;
+    height: 300px;
+  }
+
+  .accordion__title {
+    font-size: 16px;
+  }
+
+  p, ul, li {
+    font-size: 1rem;
+  }
+
+  .logo svg, 
+  .logo img {
+    width: 70%;
+  }
+
+  .courses-link {
+    font-size: 1rem;
+  }
+
+  .sub-grey-heading {
+    font-size: 1.5rem;
+  }
+
+  .sub-grey-text {
+    padding-top: 10px;
+    font-size: 1.2rem;
+  }
+
+  .intro-hd h2 {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    width: 90%;
+    margin: auto;
+  }
+
+  
+
 }
