@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Logout extends Component {
 
-  constructor() {
+  constructor(props) {
     super();
     this.state = { 
       email: '', 
@@ -12,7 +12,8 @@ export default class Logout extends Component {
 
 
   handleSubmit = () => {
-    sessionStorage.clear();
+    localStorage.removeItem('uni_email');
+    localStorage.removeItem('sjfsj');
     const currentPage = window.location.origin + '/course-board';
     const hostOrign = window.location.origin;
     const pathName = window.location.pathname;
@@ -28,7 +29,7 @@ export default class Logout extends Component {
   render() {
     return (
       <>
-        <button onClick={this.handleSubmit} className="logout">Logout</button>
+        <button onClick={this.handleSubmit} className={`logout ${this.props.color}`}>Logout</button>
       </>
     )
   }

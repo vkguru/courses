@@ -17,8 +17,8 @@ export default class Login extends Component {
   }
 
   checkIfSuccessful(){
-    const accessCode = sessionStorage.getItem('sjfsj');
-    const user = sessionStorage.getItem('uni_email');
+    const accessCode = localStorage.getItem('sjfsj');
+    const user = localStorage.getItem('uni_email');
 
     //Authenticates User
     if(this.state.email === user && this.state.password === accessCode) {
@@ -64,8 +64,8 @@ export default class Login extends Component {
     })
     .then(data => {
       console.log('Success:', data);
-      sessionStorage.setItem('sjfsj', data.user.code);
-      sessionStorage.setItem('uni_email', data.user.email);
+      localStorage.setItem('sjfsj', data.user.code);
+      localStorage.setItem('uni_email', data.user.email);
       this.checkIfSuccessful()
       
     })

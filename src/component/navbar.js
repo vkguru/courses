@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { loggedUser,  verCode} from './session';
+import Logout from '../pages/logout';
 // import logo from '../asset/img/logo.png';
 
  function Nav() {
@@ -73,10 +75,14 @@ import { Link } from 'react-router-dom';
           </Link>
         </div>
 
-        {/* <div className="menu">
-          <Link className="menu-text" to="/register">SIGN UP</Link>
-          <Link className="menu-text" to="/login">LOGIN</Link>
-        </div> */}
+        <div className="menu">
+
+          { loggedUser && verCode?
+            <Logout color="menu-text" />
+            :
+            <Link className="menu-text" to="/login">Login</Link>
+          }
+        </div>
       </div>
     </nav>
   )

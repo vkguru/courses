@@ -1,21 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logoDark from '../asset/img/DODO-Workshops-logo.png';
-// import { loggedUser,  verCode} from './session';
+import { loggedUser,  verCode} from './session';
+import Logout from '../pages/logout';
 
  function NavDark() {
-
-  // const [menu, setMenu] = useState("Welcome");
-  
-  // const menu = document.querySelector('.menu-text');
-
-  // if(loggedUser && verCode ) {
-  //   // document.querySelector('.menu-text').innerHTML = 'Welcome!';
-  //   // console.log(menu);
-  //   this.props = 'Welcome';
-  // } else {
-    
-  // }
 
   return (
     <nav className="nav">
@@ -28,7 +17,12 @@ import logoDark from '../asset/img/DODO-Workshops-logo.png';
 
         <div className="menu">
         <p className="menu-text dark" props="menu"></p>
-          {/* <Link className="menu-text dark" to="/login">LOGIN</Link> */}
+
+          { loggedUser && verCode?
+            <Logout color="menu-text dark" />
+            :
+            <Link className="menu-text dark" to="/login">Login</Link>
+          }
         </div>
 
       </div>
