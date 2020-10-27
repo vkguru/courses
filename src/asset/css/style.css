@@ -1504,6 +1504,11 @@ button.active {
   vertical-align: sub;
 }
 
+.hero-banner {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 1280px) {
   .intro-hd {
     width: 45%;
