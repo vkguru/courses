@@ -1480,6 +1480,30 @@ button.active {
   transition: .5s ease-in-out;
 }
 
+.support {
+  position: fixed;
+  bottom: 90px;
+  right: 0;
+  border: 1px solid #4C5357;
+  border-radius: 90px 0 0 90px;
+  padding: 0px 0 0 20px;
+  margin-right: -10px;
+  background-color: #eee;
+}
+
+.support a {
+  text-decoration: none;
+}
+
+.support p {
+  padding-right: 20px;
+}
+
+.support p svg {
+  padding-right: 15px;
+  vertical-align: sub;
+}
+
 @media screen and (max-width: 1280px) {
   .intro-hd {
     width: 45%;
@@ -1818,6 +1842,9 @@ button.active {
     margin: auto;
   }
 
+  .support {
+    display: none;
+  }
   
 
 }
