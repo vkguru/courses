@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavDarkLogin from '../component/navbarDark-login';
 import Footer from '../component/footer';
-import Support from '../component/support';
 import { loggedUser,  verCode} from '../component/session';
 import PlaylistContent from '../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
@@ -89,7 +88,6 @@ export default function CourseBoard() {
           
         </div>
       </div> 
-        <Support />
         <Footer />
     </section>
   )
