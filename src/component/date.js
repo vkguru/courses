@@ -13,8 +13,7 @@ import React from 'react';
   return (
     <>
       <div className="notice">
-        <h2>Your access to this course expires on</h2>
-        <h2 className="exp-date">{futureDate}</h2>
+        <h2>Your access to this course expires on <span>{futureDate}</span></h2>
       </div>
     </>
   )

@@ -47,7 +47,7 @@ function Cart() {
 
           <div className="prod-text">
             <h3>Prototyping for Businesses Masterclass</h3>
-            <p>Introduction to Selling Workshop</p>
+            {/* <p>Introduction to Selling Workshop</p> */}
           </div>
         </div>
 
@@ -67,8 +67,8 @@ function Cart() {
         </div>
 
         <div className="prod-price">
-          <h3>NGN 5,000</h3>
-          <p>Team discount reflects as quantity increases</p>
+          <h3>NGN 3,500</h3>
+          {/* <p>Team discount reflects as quantity increases</p> */}
         </div>
 
         <div className="del">
@@ -80,9 +80,9 @@ function Cart() {
 
       <div className="prod-pricing">
         <div className="pricing-container">
-          <p>Subtotal: <span>NGN 5,000</span></p>
+          <p>Subtotal: <span>NGN 3,500</span></p>
           <p>Subcharge: <span>-</span></p>
-          <p id="total">Total <span>NGN 5,000</span></p>
+          <p id="total">Total <span>NGN 3,500</span></p>
           {/* <Link to='/register' className="courses-link b-nxt">Checkout</Link> */}
           <button onClick={() => setmodalIsOpen(true)} className="courses-link b-nxt">Checkout</button>
         </div>
