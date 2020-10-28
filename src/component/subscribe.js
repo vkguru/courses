@@ -19,7 +19,7 @@ class Subscribe extends Component {
             sending: "Sending...",
             success: "Thank you for subscribing!",
             error: "An unexpected internal error has occurred.",
-            empty: "You must write an e-mail.",
+            empty: "Please enter a valid email address",
             duplicate: "Too many subscribe attempts for this email address",
             button: "Subscribe"
           }

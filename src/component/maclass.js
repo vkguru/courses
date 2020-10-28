@@ -6,7 +6,7 @@ import poster from '../asset/img/courses-banner.jpg';
 
 function Masterclassin() {
   return (
-    <section className="section sub-grey">
+    <section className="section sub-grey" id="pre">
       <h2 className="sub-grey-heading">What's Inside This Masterclass</h2>
 
         <div className="video-preview">
