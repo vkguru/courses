@@ -513,7 +513,8 @@ ul.vid-list li {
   color: #444545;
 }
 
-.form-control {
+.form-control, 
+.sub-form input {
   padding: 15px 30px;
   width: 50%;
   border: 1px solid rgba(68, 69, 69, 0.5);
@@ -522,7 +523,8 @@ ul.vid-list li {
   opacity: .8;
 }
 
-.submit {
+.submit,
+.sub-form button {
   width: 30%;
   padding: 15px 30px;
   background-color: var(--courses-yellow);
@@ -535,7 +537,8 @@ ul.vid-list li {
   position: relative;
 }
 
-.submit:before {
+.submit:before,
+.sub-form button:before {
   display: block;
   position: absolute;
   left: 0px;
@@ -548,7 +551,8 @@ ul.vid-list li {
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
-.submit:hover:before {
+.submit:hover:before,
+.sub-form button:hover:before {
   top: 0%;
 	bottom: auto;
 	height: 100%;
@@ -754,7 +758,8 @@ ul.vid-list li {
   padding-bottom: 20px;
 }
 
-.pay-form-control {
+.pay-form-control, 
+.team-form input {
   padding: 15px 30px;
   width: 90%;
   border: 1px solid rgba(68, 69, 69, 0.5);
@@ -1791,12 +1796,14 @@ button.active {
     flex-direction: column;
   }
 
-  .form-control {
+  .form-control,
+  .sub-form input {
     width: 80%;
     font-size: 1rem;
   }
 
-  .submit {
+  .submit,
+  .sub-form button {
     width: 100%; 
     border-radius: 5px;
     margin-top: 10px;

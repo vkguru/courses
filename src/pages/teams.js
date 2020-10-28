@@ -1,43 +1,51 @@
-import React from 'react';
-import NavDark from '../component/navbar-dark'
+import React, { Component } from 'react';
+import NavDark from '../component/navbar-dark';
 
-export default function Teams() {
-  return (
-    <>
-      <NavDark />
+export default class Teams extends Component {
 
-      <div className="formHolder">
+  handleSubmit(evt) {
+    evt.preventDefault();
+  };
 
-          <h3>TEAMS WAITLIST</h3>
+  render() {
 
-          <form className="cr-form">
+    return (
+      <>
+        <NavDark />
 
-            <div className="form-group-reg">
-              <label>Company Name</label>
-              <input type="text" className="pay-form-control" name="name" />
-            </div>
+        <div className="formHolder">
 
-            <div className="form-group-reg">
-              <label>Email Address</label>
-              <input type="email" className="pay-form-control" name="email"  />
-            </div>
+            <h3>TEAMS WAITLIST</h3>
 
-            <div className="form-group-reg">
-              <label>Size of Team</label>
-              <input type="text" className="pay-form-control" name="password" />
-            </div>
+            <form onSubmit={this.handleSubmit} className="cr-form" action="https://dodo.us10.list-manage.com/subscribe/post?u=26622333f91e30792644adb18&amp;id=42f5dd2cc8" method="post">
 
-            <div className="form-group-reg">
-              <label>What Other Courses Around Prototype Will Your Team Love To Learn?</label>
-              <textarea className="pay-form-control" rows="5"></textarea>
-            </div>
+              <div className="form-group-reg">
+                <label>Company Name</label>
+                <input type="text" className="pay-form-control" name="name" />
+              </div>
 
-            <div className="form-group-reg">
-              <button type="submit" className="bfl submit">Submit</button>
-            </div>
+              <div className="form-group-reg">
+                <label>Email Address</label>
+                <input type="email" className="pay-form-control" name="email"  />
+              </div>
 
-          </form>
-        </div>
-      </>
-  )
+              <div className="form-group-reg">
+                <label>Size of Team</label>
+                <input type="text" className="pay-form-control" name="password" />
+              </div>
+
+              <div className="form-group-reg">
+                <label>What Other Courses Around Prototype Will Your Team Love To Learn?</label>
+                <textarea className="pay-form-control" rows="5"></textarea>
+              </div>
+
+              <div className="form-group-reg">
+                <button type="submit" className="bfl submit">Submit</button>
+              </div>
+
+            </form>
+          </div>
+        </>
+    )
+  }
 }
