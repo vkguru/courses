@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logoDark from '../asset/img/DODO-Workshops-logo.png';
+import logoDark from '../asset/img/DODO-Workshops-logo-black.png';
 import Logout from '../pages/logout';
 import DateCal from '../component/date';
 import { loggedUser,  verCode} from '../component/session';

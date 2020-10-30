@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoDark from '../asset/img/DODO-Workshops-logo.png';
+import logoDark from '../asset/img/DODO-Workshops-logo-black.png';
 import { loggedUser,  verCode} from './session';
 import Logout from '../pages/logout';
 
