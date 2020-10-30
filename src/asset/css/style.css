@@ -1339,6 +1339,10 @@ button.active {
   opacity: 1;
 }
 
+.accordion__link.active {
+  font-weight: bold;
+}
+
 .accordion__text p svg,
 .accordion__link svg {
   vertical-align: middle;

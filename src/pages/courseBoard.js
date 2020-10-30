@@ -90,7 +90,7 @@ export default function CourseBoard() {
           </div>
 
           <div className="course-fit">
-            <PlaylistContent />
+            <PlaylistContent introOne="active"/>
           </div>
           
         </div>

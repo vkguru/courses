@@ -7,6 +7,7 @@ import LessonThree from './playlistContent/lessonThree';
 import Conclusion from './playlistContent/conclusion';
 
 export default function PlaylistContent() {
+
   return (
     <div>
       <div>
