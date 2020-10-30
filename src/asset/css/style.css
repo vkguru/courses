@@ -64,7 +64,7 @@ p, ul, li {
   color: #fff;
   text-decoration: none;
   font-family: "Gilroy SemiBold";
-  font-size: 1.2rem;
+  font-size: 15px;
   padding: 0 15px;
   margin: 0;
   transition: all .5s ease-in-out;
@@ -605,6 +605,7 @@ ul.vid-list li {
   margin: auto;
   background-color: #f8f8f8;
   padding: 3rem 0;
+  justify-content: space-between;
 }
 
 .cart-prod-detail {
@@ -631,7 +632,7 @@ ul.vid-list li {
 }
 
 .prod-price {
-  width: 26%;
+  width: 12%;
 }
 
 .del {
@@ -654,6 +655,7 @@ ul.vid-list li {
 
 .prod-text {
   width: 50%;
+  margin-left: -45px;
 }
 
 .prod-pricing {
@@ -1162,16 +1164,23 @@ button.active {
 
 .vid-res {
   width: 72%;
-  padding-bottom: 8rem;
 }
 
 .vid-res img {
   width: 100%;
 }
 
+.p {
+  margin-top: 0;
+}
+
+.p video[poster] {
+  object-fit: cover;
+}
+
 .course-board-menu {
-  width: 28%;
-  background-color: #f9f9f9;
+  width: 32%;
+  background-color: #eee;
   border-left: 2px solid #eee;
 }
 
@@ -1219,9 +1228,10 @@ button.active {
 }
 
 .cr-level-text {
-  font-size: 1.08rem;
+  font-size: 0.9rem;
   color: #000;
   font-family: "Gilroy SemiBold";
+  text-transform: uppercase;
 }
 
 .course-name {
@@ -1375,7 +1385,7 @@ button.active {
 }
 
 .course-fit {
-  height: 80vh;
+  height: 65vh;
   overflow: scroll;
   background: #eeeeee;
 }
@@ -1388,8 +1398,12 @@ button.active {
 
 #next {
   margin: 2rem 2rem 0 2rem;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.layer {
+  margin-top: 0;
 }
 
 .is-complete {
@@ -1402,6 +1416,12 @@ button.active {
   color: var(--courses-dark-gray);
   border: none;
   cursor: pointer;
+}
+
+.is-complete span img {
+  width: 13px;
+  vertical-align: middle;
+  padding-left: 10px;
 }
 
 .not-complete {
@@ -1699,6 +1719,7 @@ button.active {
   .prod-text {
     width: 100%;
     text-align: center;
+    margin: 0;
   }
 
   .prod-price {

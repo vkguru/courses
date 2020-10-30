@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import NavDarkLogin from '../component/navbarDark-login';
 import Footer from '../component/footer';
 import { loggedUser,  verCode} from '../component/session';
@@ -7,6 +6,7 @@ import PlaylistContent from '../component/playlistContent';
 import ReactPlayer from 'react-player/lazy';
 import poster from '../asset/img/courses-banner.jpg';
 import Progress from '../component/progress';
+import arrowDown from '../asset/img/down-arrow.svg';
 import './courseunit/courseTwo';
 
 export default function CourseBoard() {
@@ -48,28 +48,35 @@ export default function CourseBoard() {
 
       <Progress width={currentProgress} widthOne={currentProgressOne}/>
 
-      <div className="course-board">     
+      <div className="course-board">    
+       
         <div className="vid-res">
-        <div className="layer"></div>
-          <ReactPlayer 
-              url='https://dodo.ng/asset/video/Services.mp4' 
-              width='100%'
-              height='100%'
-              controls={true}
-              config={{ file: { 
-                attributes: {
-                  controlsList: 'nodownload',
-                  poster: poster
-                }
-              }}}
-              onProgress={handleComplete}
-            />
+          <div className="layer">
+            <ReactPlayer 
+                url='https://dodo.ng/asset/video/Services.mp4' 
+                width='100%'
+                height='100%'
+                controls={true}
+                config={{ file: { 
+                  attributes: {
+                    controlsList: 'nodownload',
+                    poster: poster
+                  }
+                }}}
+                onProgress={handleComplete}
+                className="p"
+              />
+            </div>
               
             <div id="next">
                 <a href="text.pdf" className="is-complete" download>
                   Download PDF
+                  
+                  <span>
+                    <img src={arrowDown} alt="arrow-down"/>
+                  </span>
+
                 </a>
-              <Link to="/course-board/2" className="is-complete">Next</Link>
             </div>
 
         </div>

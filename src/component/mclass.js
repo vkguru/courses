@@ -1,6 +1,6 @@
 import React from 'react';
 import productTeam from '../asset/img/product-teams.jpg';
-import entrepreneur from '../asset/img/entrepreneur.jpg';
+import entrepreneur from '../asset/img/Enterprenuer.jpg';
 
 function Masterclass() {
   return (

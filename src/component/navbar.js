@@ -82,6 +82,12 @@ import Logout from '../pages/logout';
             :
             <Link className="menu-text" to="/login">Login</Link>
           }
+
+          { loggedUser && verCode?
+            <Link className="menu-text" to="/course-board">dashboard</Link>
+            :
+            ''
+          }
         </div>
       </div>
     </nav>
