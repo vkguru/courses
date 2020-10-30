@@ -4,7 +4,7 @@ import React from 'react';
 
   const regDate = localStorage.getItem('date_created');
   const date = new Date(regDate);
-  date.setDate(date.getDate() + 90)
+  date.setDate(date.getDate() + 89)
   const dd = date.getDate();
   const mm = date.getMonth();
 
