@@ -67,7 +67,7 @@ function Pay() {
             <div className="tx-lr fl">
 
             <p>Price: <span>NGN 3,500</span></p>
-            <p>Subcharge: <span>-</span></p>
+            <p>VAT: <span>-</span></p>
             <p id="total">Total <span>NGN 3,500</span></p>
 
             </div>
