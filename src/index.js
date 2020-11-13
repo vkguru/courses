@@ -15,6 +15,8 @@ import Login from './pages/login';
 import Teams from './pages/teams'
 import Provider from './pages/provider';
 import NotFoundPage from './pages/notFound';
+import TeamReg from './pages/teamReg';
+import RegMembers from './pages/regMembers';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -24,16 +26,17 @@ const routing = (
       <Route path="/cart" component={Cart} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/payment-success" component={Success} />
-      {/* { loggedUser && verCode? <Route path="/course-board" component={CourseBoard} /> :  <Route path="/login" component={Login} />} */}
       <Route exact path="/course-board" component={CourseBoard} />
       <Route exact path="/course-board/2" component={CourseTwo} />
       <Route exact path="/course-board/3" component={CourseThree} />
       <Route exact path="/course-board/4" component={CourseFour} />
-      <Route path="/teams" component={Teams} />
+      <Route exact path="/teams" component={Teams} />
       <Route path="/register" component={Signup} />
       <Route path="/login" component={Login} />
       <Route path="/provider" component={Provider} />
       <Route path="/success" component={Success} />
+      <Route exact path="/teams/register" component={TeamReg} />
+      <Route exact path="/teams/members-registration" component={RegMembers} />
       <Route path="" component={NotFoundPage} />
     </Switch>
   </Router>

@@ -1572,6 +1572,36 @@ button.active {
   object-fit: cover;
 }
 
+.reg-title h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.form-group-reg .reg-input {
+  display: flex;
+}
+
+.form-group-reg .reg-input svg {
+  margin-top: 20px;
+  width: 10%;
+  cursor: pointer;
+}
+
+.tm {
+  width: 92%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1290px) {
+  .tm {
+    width: 91%;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .intro-hd {
     width: 45%;

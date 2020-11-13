@@ -6,8 +6,13 @@ export default class Signup extends Component {
     super();
     this.state = { 
       email: '', 
-      errors: {}
+      errors: {},
+      text: 'Submit'
     };
+  }
+
+  changeText = (text) => {
+    this.setState({text})
   }
 
   handleChange = (event) => {
@@ -92,7 +97,7 @@ export default class Signup extends Component {
           </div>
 
           <div className="form-group-reg">
-            <button type="submit" className="bfl submit">{this.validInput? 'Loading...' : 'Submit'}</button>
+            <button type="submit" className="bfl submit" onClick={ () => { this.changeText("Loading...")}  }>{this.state.text}</button>
           </div>
 
 
