@@ -16,6 +16,7 @@ import Teams from './pages/teams'
 import Provider from './pages/provider';
 import NotFoundPage from './pages/notFound';
 import TeamReg from './pages/teamReg';
+import PayTeam from './pages/teamCheckOut';
 import RegMembers from './pages/regMembers';
 import * as serviceWorker from './serviceWorker';
 
@@ -36,6 +37,7 @@ const routing = (
       <Route path="/provider" component={Provider} />
       <Route path="/success" component={Success} />
       <Route exact path="/teams/register" component={TeamReg} />
+      <Route exact path="/teams/checkout" component={PayTeam} />
       <Route exact path="/teams/members-registration" component={RegMembers} />
       <Route path="" component={NotFoundPage} />
     </Switch>

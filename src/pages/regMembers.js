@@ -6,28 +6,57 @@ export default class RegMembers extends Component {
   constructor() {
     super();
     this.state = {
-      createForm: ''
-    }
+      "users": [
+        {
+         team_name: 'teamX',
+         email: ''
+        },
+        {
+          team_name: 'teamX',
+          email: ''
+        }
+      ],
+      errors: {}
+    };
   }
 
-  newForm = (el) => {
+  handleChange = (event) => {
+    this.setState({[event.target.name]: event.target.value})
+  }
+
+  handleSubmit = (event) => {
     
-    this.setState({el})
+    fetch('https://dodocourses.herokuapp.com/api/auth/user-register', {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state),
+    })
+    .then(function(response) {
+      if (response.ok) {
+        console.log(response)
+        return response.json();
+      } else {
+        // const err = document.querySelectorAll('.err-txt');
+        // err.forEach(e => {
+        //   e.style.display = "block";
+        // });
+        console.log('not working');
+      }
+    });
+
+   const validInput = this.formValidation(); 
+
+    if(validInput === true) {
+      // window.location = "/teams/checkout";
+    }
+    
+    event.preventDefault();
   }
 
 
   render() {
-
-    let form = `<div className="reg-input">
-
-                  <input type="email" className="pay-form-control" name="email"  value="" onChange="" />
-                
-                  <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12.3472" cy="13.6002" r="12.0914" fill="#444545"/>
-                  <path d="M5.98442 12.2934H10.5737V7.70416H13.3142V12.2934H17.9034V15.0339H13.3142V19.6232H10.5737V15.0339H5.98442V12.2934Z" fill="white"/>
-                  </svg>
-
-                </div>`
 
     return (
       <>
@@ -39,23 +68,120 @@ export default class RegMembers extends Component {
         </div>
 
         <div className="formHolder">
-          <form className="cr-form">
+
+          <form className="cr-form" onSubmit={this.handleSubmit}>
+            
+              <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <input type="email" className="pay-form-control" name="email"  value={this.state.value} onChange={this.handleChange} />
+
+              </div>
+
+              <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <input type="email" className="pay-form-control" name="email"  value={this.state.value} onChange={this.handleChange} />
+
+              </div>
+
+              {/* <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <div className="reg-input">
+
+                  <input type="email" className="pay-form-control" name="email2"  value={this.state.value} onChange={this.handleChange} />
+
+                </div>
+
+              </div> */}
+
+              {/* <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <div className="reg-input">
+
+                  <input type="email" className="pay-form-control" name="email3"  value={this.state.value} onChange={this.handleChange} />
+
+                </div>
+
+              </div>
+
               <div className="form-group-reg">
 
                 <label>User Email</label>
 
                 <div className="reg-input">
 
-                  <input type="email" className="pay-form-control" name="email"  value="" onChange="" />
-                
-                  <svg onClick={() => {this.setState({form})} } width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12.3472" cy="13.6002" r="12.0914" fill="#444545"/>
-                  <path d="M5.98442 12.2934H10.5737V7.70416H13.3142V12.2934H17.9034V15.0339H13.3142V19.6232H10.5737V15.0339H5.98442V12.2934Z" fill="white"/>
-                  </svg>
+                  <input type="email" className="pay-form-control" name="email4"  value={this.state.value} onChange={this.handleChange} />
 
                 </div>
 
               </div>
+
+              <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <div className="reg-input">
+
+                  <input type="email" className="pay-form-control" name="email5"  value={this.state.value} onChange={this.handleChange} />
+
+                </div>
+
+              </div>
+
+              <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <div className="reg-input">
+
+                  <input type="email" className="pay-form-control" name="email6"  value={this.state.value} onChange={this.handleChange} />
+
+                </div>
+
+              </div>
+
+              <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <div className="reg-input">
+
+                  <input type="email" className="pay-form-control" name="email7"  value={this.state.value} onChange={this.handleChange} />
+
+                </div>
+
+              </div>
+
+              <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <div className="reg-input">
+
+                  <input type="email" className="pay-form-control" name="email8"  value={this.state.value} onChange={this.handleChange} />
+
+                </div>
+
+              </div>
+
+              <div className="form-group-reg">
+
+                <label>User Email</label>
+
+                <div className="reg-input">
+
+                  <input type="email" className="pay-form-control" name="email9"  value={this.state.value} onChange={this.handleChange} />
+
+                </div>
+
+              </div> */}
 
               <div className="form-group-reg">
                 <button type="submit" className="tm submit">Register</button>
