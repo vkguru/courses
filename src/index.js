@@ -20,7 +20,7 @@ import TeamReg from './pages/teamReg';
 import PayTeam from './pages/teamCheckOut';
 import RegMembers from './pages/regMembers';
 import teamsLogin from './pages/teamsLogin';
-import testForm from './pages/testForm';
+import testForm from './draft/testForm';
 import regMem from './pages/regMem';
 import * as serviceWorker from './serviceWorker';
 

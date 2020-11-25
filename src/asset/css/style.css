@@ -769,14 +769,15 @@ ul.vid-list li {
 
 .pay-form-control, 
 .team-form input {
-  padding: 15px 30px;
-  width: 90%;
+  padding: 15px;
+  width: 95%;
   border: 1px solid rgba(68, 69, 69, 0.5);
   font-family: 'Gilroy SemiBold';
   font-size: 18px;
   opacity: .8;
   border-radius: 5px;
   margin: 10px 0;
+  caret-color: var(--courses-yellow);
 }
 
 .form-group-fl label,  
@@ -1581,6 +1582,7 @@ button.active {
 
 .form-group-reg .reg-input {
   display: flex;
+  caret-color: var(--courses-yellow);
 }
 
 .form-group-reg .reg-input svg {

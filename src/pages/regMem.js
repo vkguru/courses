@@ -65,17 +65,17 @@ export default class RegMembers extends Component {
     let users = [...this.state.users];
     users.splice(i,1);
     this.setState({ users });
- }
+  }
 
   handleSubmit = (event) => {
 
     const token = localStorage.getItem('admtok');
     
     fetch('https://dodocourses.herokuapp.com/api/auth/user-register', {
-      method: 'POST', 
-      mode: 'no-cors',
+      method: 'post', 
       headers: {
         'Content-Type': 'application/json',
+        "Access-Control-Allow-Methods": "*",
         'Authorization': `Bearer ${token}`,
         'Authentication': token
       },
