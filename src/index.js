@@ -6,6 +6,7 @@ import App from './App';
 import Cart from './pages/cart';
 import Checkout from  './pages/checkout';
 import Success from './pages/success';
+import SuccessTeam from './pages/teamSuccess';
 import CourseBoard from './pages/courseBoard';
 import CourseTwo from './pages/courseunit/courseTwo';
 import CourseThree from './pages/courseunit/courseThree';
@@ -18,6 +19,9 @@ import NotFoundPage from './pages/notFound';
 import TeamReg from './pages/teamReg';
 import PayTeam from './pages/teamCheckOut';
 import RegMembers from './pages/regMembers';
+import teamsLogin from './pages/teamsLogin';
+import testForm from './pages/testForm';
+import regMem from './pages/regMem';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -36,9 +40,13 @@ const routing = (
       <Route path="/login" component={Login} />
       <Route path="/provider" component={Provider} />
       <Route path="/success" component={Success} />
+      <Route path="/success-teamreg" component={SuccessTeam} />
       <Route exact path="/teams/register" component={TeamReg} />
       <Route exact path="/teams/checkout" component={PayTeam} />
       <Route exact path="/teams/members-registration" component={RegMembers} />
+      <Route exact path="/teams/login" component={teamsLogin} />
+      <Route exact path="/teams/testform" component={testForm} />
+      <Route exact path="/teams/members" component={regMem} />
       <Route path="" component={NotFoundPage} />
     </Switch>
   </Router>

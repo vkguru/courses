@@ -537,7 +537,7 @@ ul.vid-list li {
   padding: 15px 30px;
   background-color: var(--courses-yellow);
   border-radius: 0px 5px 5px 0px;
-  border: 1px solid var(--courses-yellow);
+  border: 0px solid var(--courses-yellow);
   color: var(--courses-dark-gray);
   font-size: 18px;
   font-family: 'Gilroy SemiBold';
@@ -552,6 +552,7 @@ ul.vid-list li {
   bottom: 0px;
   height: 0px;
   width: 100%;
+  border-radius: 5px;
   z-index: 1;
   content: '';
   background: #0000000d;
@@ -1583,8 +1584,8 @@ button.active {
 }
 
 .form-group-reg .reg-input svg {
-  margin-top: 20px;
-  width: 10%;
+  margin: 0px 0 5px 0;
+  width: 70%;
   cursor: pointer;
 }
 

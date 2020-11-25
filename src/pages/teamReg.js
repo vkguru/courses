@@ -55,20 +55,27 @@ export default class TeamReg extends Component {
         console.log(response)
         return response.json();
       } else {
-        const err = document.querySelectorAll('.err-txt');
-        err.forEach(e => {
+        const er = document.querySelectorAll('.err-txt');
+        er.forEach(e => {
           e.style.display = "block";
         });
       }
-    });
+    })
+
+    .then(data => {
+
+      if(validInput === true) {
+        window.location = "/teams/checkout";
+        sessionStorage.setItem('email_team', this.state.email );
+        localStorage.setItem('date_created', data.user.created_at.slice(0, 10) );
+        localStorage.setItem('emailteam_', this.state.email );
+        sessionStorage.setItem('_cctoktims', data.access_token );
+      }
+
+    })
 
    const validInput = this.formValidation(); 
 
-    if(validInput === true) {
-      window.location = "/teams/checkout";
-      sessionStorage.setItem('email_team', this.state.email );
-    }
-    
     event.preventDefault();
   }
 

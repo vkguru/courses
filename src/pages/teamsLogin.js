@@ -8,6 +8,7 @@ export default class Login extends Component {
       email: '', 
       password: '', 
       login: false, 
+      admin: false,
       error: '',
     };
   }
@@ -21,24 +22,27 @@ export default class Login extends Component {
     const user = localStorage.getItem('uni_email');
     const isAdmin = localStorage.getItem('is_admin');
 
+    if(isAdmin === true) {
+      this.setState({admin: true})
+    }
     //Authenticates User
-    if(this.state.email === user && this.state.password === accessCode) {
+    if(this.state.email === user && this.state.password === accessCode && this.state.admin === true) {
       console.log('successful');
       this.setState({login: true})
-      window.location = '/course-board';
+      window.location = '/dashboard';
       
     } else {
-      console.log('error');
+      window.location = '/course-board'
     }
 
-    // Check if User is still logged In
-    if(accessCode && user) {
-      window.location = '/course-board';
-    }
+    // // Check if User is still logged In
+    // if(accessCode && user) {
+    //   window.location = '/course-board';
+    // }
 
-    if(accessCode && user && isAdmin === true) {
-      window.location = '/dashboard';
-    }
+    // if(accessCode && user && isAdmin === true) {
+    //   window.location = '/dashboard';
+    // }
 
   }
 
@@ -75,8 +79,7 @@ export default class Login extends Component {
       localStorage.setItem('sjfsj', data.user.code);
       localStorage.setItem('uni_email', data.user.email);
       localStorage.setItem('team_name', data.user.team_name);
-      localStorage.setItem('is_admin', data.user.is_admin);
-      localStorage.setItem('admtok', data.access_token);
+      localStorage.setItem('is_admin', data.user.is_admin)
       this.checkIfSuccessful()
       
     })
