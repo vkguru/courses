@@ -75,7 +75,6 @@ export default class RegMembers extends Component {
       method: 'post', 
       headers: {
         'Content-Type': 'application/json',
-        "Access-Control-Allow-Methods": "*",
         'Authorization': `Bearer ${token}`,
         'Authentication': token
       },
