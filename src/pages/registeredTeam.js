@@ -3,11 +3,18 @@ import NavDarkLogin from '../component/navbarDark-login';
 
 export default function RegisteredTeam() {
 
+  const token = localStorage.getItem('admtok');
+
   useEffect(() => {
     // Update the document title using the browser API
     document.title = `You clicked times`;
-    fetch('https://dodocourses.herokuapp.com/api/auth/user-register', {
-      method: 'GET'
+    fetch('https://dodocourses.herokuapp.com/api/auth/get-registered-users', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+        'Authentication': token
+      }
     })
     .then(res => res.json())
     .then(data => console.log(data))
