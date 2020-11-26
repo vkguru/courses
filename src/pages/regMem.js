@@ -63,7 +63,7 @@ export default class RegMembers extends Component {
 
   removeForm(i) {
     let users = [...this.state.users];
-    users.splice(i,1);
+    users.splice(i, 1);
     this.setState({ users });
   }
 
