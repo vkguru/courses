@@ -19,7 +19,7 @@ export default function RegisteredTeam() {
         'Authentication': token
       }
     })
-    .then(res => console.log(res))
+    .then(res => res.json())
     .then(data => 
       // console.log(data),
       setResult(data)
