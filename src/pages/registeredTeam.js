@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavDarkLogin from '../component/navbarDark-login';
 
 export default function RegisteredTeam() {
 
   const token = localStorage.getItem('admtok');
+  const teamName = localStorage.getItem('team_name');
+  // const result = localStorage.getItem('result');
+  const [result, setResult] = useState([]);
 
   useEffect(() => {
     // Update the document title using the browser API
@@ -16,8 +19,11 @@ export default function RegisteredTeam() {
         'Authentication': token
       }
     })
-    .then(res => res.json())
-    .then(data => console.log(data))
+    .then(res => console.log(res))
+    .then(data => 
+      // console.log(data),
+      setResult(data)
+      )
   });
 
   const back = () =>  window.history.back();
@@ -40,6 +46,42 @@ export default function RegisteredTeam() {
         </button>
 
         <h3 className="cart-hd">Cart</h3>
+
+      </div>
+
+      <div className="team">
+        <h4>{teamName}</h4>
+      </div>
+
+      <div className="team">
+
+        <table className="team-members">
+
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Code</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {result.map((r) => (
+              <td key={r.user.id}>
+                <tr>{r.user.email}</tr>
+                <tr>{r.user.team_name}</tr>
+              </td>
+            ))}
+          </tbody>
+
+          {/* <tbody>
+            <tr>
+              <td>ww</td>
+              <td>ww</td>
+              <td>ww</td>
+            </tr>
+          </tbody> */}
+        </table>
 
       </div>
 
