@@ -5,26 +5,47 @@ export default function RegisteredTeam() {
 
   const token = localStorage.getItem('admtok');
   const teamName = localStorage.getItem('team_name');
-  // const result = localStorage.getItem('result');
-  const [result, setResult] = useState([]);
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
-    // Update the document title using the browser API
-    document.title = `You clicked times`;
-    fetch('https://dodocourses.herokuapp.com/api/auth/get-registered-users', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-        'Authentication': token
-      }
+    document.title = `Courses | Team Members`;
+    getUsers()
+    
+  });
+
+  async function getUsers() {
+    try {
+      const res = await fetch('https://dodocourses.herokuapp.com/api/auth/get-registered-users', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+          'Authentication': token
+        }
+      });
+      const data = await res.json();
+      setResults(data.users);
+    } catch(err) {
+      console.log(err)
+    }
+  }
+
+  const sendInvite = (id) => {
+    fetch(`https://dodocourses.herokuapp.com/api/auth/send-invite/${id}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`,
+      'Authentication': token
+    }
     })
     .then(res => res.json())
-    .then(data => 
-      // console.log(data),
-      setResult(data)
-      )
-  });
+    .catch(err => console.log(err))
+
+    console.log('send invite dey work' + id)
+
+    return sendInvite;
+  }
 
   const back = () =>  window.history.back();
 
@@ -59,28 +80,22 @@ export default function RegisteredTeam() {
 
           <thead>
             <tr>
-              <th>Username</th>
+              <th>Email Address</th>
               <th>Code</th>
               <th>Action</th>
             </tr>
           </thead>
 
           <tbody>
-            {result.map((r) => (
-              <td key={r.user.id}>
-                <tr>{r.user.email}</tr>
-                <tr>{r.user.team_name}</tr>
-              </td>
+            {results.map((result) => (
+              <tr key={result.id}>
+                <td>{result.email}</td>
+                <td>{result.code}</td>
+                <td><button onClick={()=>{sendInvite(result.id)}}>Send Invite</button></td>
+              </tr>
             ))}
           </tbody>
 
-          {/* <tbody>
-            <tr>
-              <td>ww</td>
-              <td>ww</td>
-              <td>ww</td>
-            </tr>
-          </tbody> */}
         </table>
 
       </div>
