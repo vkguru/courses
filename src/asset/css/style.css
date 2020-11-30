@@ -1602,9 +1602,41 @@ button.active {
   margin: 10px auto 0;
 }
 
+.team h4 {
+  padding-left: 25px;
+}
+
 .team-members {
   width: 100%;
   text-align: left;
+  border-collapse: collapse;
+}
+
+.team-members-hd tr th {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.team-members-tb tr td {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.team-members-tb {
+  margin-top: 20px;
+}
+
+.tro {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+}
+
+.invite-btn {
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Gilroy Regular';
 }
 
 @media screen and (min-width: 1290px) {

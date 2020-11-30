@@ -78,7 +78,7 @@ export default function RegisteredTeam() {
 
         <table className="team-members">
 
-          <thead>
+          <thead className="team-members-hd">
             <tr>
               <th>Email Address</th>
               <th>Code</th>
@@ -86,12 +86,12 @@ export default function RegisteredTeam() {
             </tr>
           </thead>
 
-          <tbody>
-            {results.map((result) => (
-              <tr key={result.id}>
+          <tbody className="team-members-tb">
+            {results.map((result, index) => (
+              <tr key={result.id} className={(index+1) % 2 === 0 ? `tra` : `tro` }>
                 <td>{result.email}</td>
                 <td>{result.code}</td>
-                <td><button onClick={()=>{sendInvite(result.id)}}>Send Invite</button></td>
+                <td><button className="invite-btn" onClick={()=>{sendInvite(result.id)}}>Send Invite</button></td>
               </tr>
             ))}
           </tbody>
