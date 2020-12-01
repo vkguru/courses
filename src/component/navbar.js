@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { loggedUser,  verCode} from './session';
 import Logout from '../pages/logout';
-// import logo from '../asset/img/logo.png';
 
  function Nav() {
   return (

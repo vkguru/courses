@@ -36,8 +36,8 @@ export default class Login extends Component {
       window.location = '/course-board';
     }
 
-    if(accessCode && user && isAdmin === true) {
-      window.location = '/dashboard';
+    if(accessCode && user && isAdmin) {
+      window.location = '/teams/members-registration';
     }
 
   }

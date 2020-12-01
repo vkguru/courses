@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import NavDarkLogin from '../component/navbarDark-login';
+import NavDarkLogin from '../component/navdarkadmin-login';
+import {Link} from 'react-router-dom';
 
 export default function RegisteredTeam() {
 
   const token = localStorage.getItem('admtok');
   const teamName = localStorage.getItem('team_name');
   const [results, setResults] = useState([]);
+  const [notify, setNotify] = useState(null);
 
   useEffect(() => {
     document.title = `Courses | Team Members`;
@@ -39,10 +41,13 @@ export default function RegisteredTeam() {
       'Authentication': token
     }
     })
-    .then(res => res.json())
+    .then(res => {
+      if(res.ok) {
+        setNotify(id);
+      }
+    })
     .catch(err => console.log(err))
-
-    console.log('send invite dey work' + id)
+    console.log(id)
 
     return sendInvite;
   }
@@ -91,13 +96,29 @@ export default function RegisteredTeam() {
               <tr key={result.id} className={(index+1) % 2 === 0 ? `tra` : `tro` }>
                 <td>{result.email}</td>
                 <td>{result.code}</td>
-                <td><button className="invite-btn" onClick={()=>{sendInvite(result.id)}}>Send Invite</button></td>
+                <td>
+                  <button className="invite-btn" onClick={()=>{sendInvite(result.id)}}>
+                    Send Invite 
+                  </button>
+                    {notify === result.id ?
+                      <svg width="15" height="16" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10.5955" cy="10.0769" r="9.72241" fill="#009A49"/>
+                      <path d="M8.64638 12.4329L6.11131 9.89781L5.24805 10.755L8.64638 14.1533L15.9416 6.85816L15.0844 6.00098L8.64638 12.4329Z" fill="white"/>
+                      </svg>
+                      :
+                      ''
+                    }
+                </td>
               </tr>
             ))}
           </tbody>
 
         </table>
 
+      </div>
+
+      <div className="team ds">
+        <Link to="/teams/members-registration" className="courses-link">Return to Dashboard</Link>
       </div>
 
     </>

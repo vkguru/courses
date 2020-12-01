@@ -1637,6 +1637,21 @@ button.active {
   font-size: 16px;
   cursor: pointer;
   font-family: 'Gilroy Regular';
+  padding: 0;
+  margin-right: 15px;
+}
+
+.ds {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.tro td svg {
+  vertical-align: middle;
+}
+
+.team-members-hd tr th:nth-child(1), .team-members-hd tr th:nth-child(2) {
+  width: 43%;
 }
 
 @media screen and (min-width: 1290px) {
@@ -1990,6 +2005,14 @@ button.active {
 
   .support {
     display: none;
+  }
+
+  .ds {
+    padding-left: 20px;
+  }
+
+  .team {
+    width: 100%;
   }
   
 

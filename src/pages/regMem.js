@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavDarkLogin from '../component/navbarDark-login';
+import NavDarkLogin from '../component/navdarkadmin-login';
 
 export default class RegMembers extends Component {
 
@@ -125,6 +125,7 @@ export default class RegMembers extends Component {
           </form>
 
         </div>
+        
       </>
     )
   }
