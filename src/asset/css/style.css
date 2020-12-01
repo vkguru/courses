@@ -537,7 +537,7 @@ ul.vid-list li {
   padding: 15px 30px;
   background-color: var(--courses-yellow);
   border-radius: 0px 5px 5px 0px;
-  border: 0px solid var(--courses-yellow);
+  border: 1px solid var(--courses-yellow);
   color: var(--courses-dark-gray);
   font-size: 18px;
   font-family: 'Gilroy SemiBold';
