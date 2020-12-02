@@ -15,9 +15,9 @@ function Intro() {
       </div>
 
       <div className="intro-sub">
-        <h3>What will you gain</h3>
+        <h3>What will you gain?</h3>
 
-        <p>Bringing a fully developed offering to the market is incredibly cost intensive for any company or team. With the huge amount of resources spent, you want to de-risk any potential mishaps surrounding your product or service’ entry and success in the market, you also want to bring a product to the market that customers enjoy using and has competitive advantage. This is where prototyping comes in. Prototyping goes beyond just testing a digital product, you can test business models, value propositions, price points and more. In this Masterclass we will show you how?</p>
+        <p>Bringing a fully developed offering to the market is incredibly cost intensive for any company or team. With the huge amount of resources spent, you want to de-risk any potential mishaps surrounding your product or service’ entry and success in the market, you also want to bring a product to the market that customers enjoy using and has competitive advantage. This is where prototyping comes in. Prototyping goes beyond just testing a digital product, you can test business models, value propositions, price points and more. In this Masterclass we will show you how.</p>
 
         <p>We’ve taken great detail to design this Masterclass for teams and entrepreneurs that seek real actionable data to back their ideas or improve their products performance in the market.</p>
       </div>
