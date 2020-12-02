@@ -38,7 +38,7 @@ function Intro() {
 
         <p>At the end of this class, you and your team will be able to build rough prototypes, testing with real customers and iterate for more successful products.</p>
 
-        <p>To hire a Design Research and Strategy agency to carry out this session would rack up millions in cost. Take advantage of our early bird offer of N5,000 complete with intimate videos, free worksheets and tools.</p>
+        <p>To hire a Design Research and Strategy agency to carry out this session would rack up millions in cost. Take advantage of our early bird offer of N3,500 complete with intimate videos, free worksheets and tools.</p>
         
       </div>
 
