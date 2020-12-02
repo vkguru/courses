@@ -8,12 +8,12 @@ function Subintro() {
 
         <div className="crd">
           <br />
-          <p>Prototyping allows you to bring an offering to market that has been truly tested and validated</p>
+          <p> <span className="square"></span> Prototyping allows you to bring an offering to market that has been truly tested and validated</p>
         </div>
 
         <div className="crd">
           <br />
-          <p>It gives your team the confidence you need to release a product into the market</p>
+          <p> <span className="square"></span> It gives your team the confidence you need to release a product into the market</p>
         </div>
 
       </div>
@@ -22,12 +22,12 @@ function Subintro() {
 
         <div className="crd">
           <br />
-          <p>It helps you get stakeholder buy-in</p>
+          <p> <span className="square"></span> It helps you get stakeholder buy-in</p>
         </div>
 
         <div className="crd">
           <br />
-          <p>It helps you delight customers with valuable products and experiences</p>
+          <p> <span className="square"></span> It helps you delight customers with valuable products and experiences</p>
         </div>
 
       </div>

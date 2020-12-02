@@ -31,12 +31,14 @@ export default class Login extends Component {
       console.log('error');
     }
 
+    console.log(isAdmin)
+
     // Check if User is still logged In
     if(accessCode && user) {
       window.location = '/course-board';
     }
 
-    if(accessCode && user && isAdmin) {
+    if(accessCode && user && isAdmin === 'true') {
       window.location = '/teams/members-registration';
     }
 
