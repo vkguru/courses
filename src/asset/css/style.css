@@ -275,6 +275,11 @@ p, ul, li {
   display: flex;
 }
 
+.square {
+  padding-right: 10px;
+  margin-top: 5px;
+}
+
 .square:before {
   content: '';
   background: #fcc519;
