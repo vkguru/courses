@@ -8,7 +8,7 @@ function Instructor() {
 
   return (
     <section className="section sub">
-        <h2>Our Instructors</h2>
+        <h2>Our Instructor</h2>
 
       <div className="courses-instructors">
 
