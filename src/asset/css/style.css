@@ -1072,13 +1072,14 @@ button.active {
   color: var(--courses-yellow);
 }
 
-.error {
+.error, .success {
   visibility: hidden;
   margin: 0 0 1rem;
+  width: 94%;
 }
 
 .error p, 
-.error-l p {
+.error-l p, .success p {
   font-family: "Gilroy SemiBold";
   font-size: 1rem;
   text-align: center;

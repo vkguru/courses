@@ -8,7 +8,8 @@ export default class RegMembers extends Component {
     const teamName = localStorage.getItem('team_name');
     this.state = {
       users: [{team_name:teamName, email: ""}],
-      errors: {}
+      errors: {},
+      success: ''
     };
   }
 
@@ -83,6 +84,12 @@ export default class RegMembers extends Component {
     .then(function(response) {
       if (response.ok) {
         console.log(response)
+        this.setState({success: 'Registered Successfully'});
+        document.querySelector('.success').style.visibility = 'visible';
+        setTimeout(() => {
+          this.setState({success: ''})
+          document.querySelector('.success').style.visibility = 'hidden'
+        }, 5000)
         return response.json();
       } else {
         // const err = document.querySelectorAll('.err-txt');
@@ -115,6 +122,10 @@ export default class RegMembers extends Component {
         <div className="formHolder">
 
           <form className="cr-form" onSubmit={this.handleSubmit}>
+
+            <div className="success">
+              <p>{this.state.success}</p>
+            </div>
 
             {this.createForm()}
 
