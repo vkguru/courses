@@ -71,7 +71,7 @@ export default function RegisteredTeam() {
           Back
         </button>
 
-        <h3 className="cart-hd">Cart</h3>
+        <h3 className="cart-hd">Registered Memebers</h3>
 
       </div>
 
