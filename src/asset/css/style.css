@@ -1086,8 +1086,14 @@ button.active {
   color: var(--courses-yellow);
 }
 
-.error, .success {
+.error {
   visibility: hidden;
+  margin: 0 0 1rem;
+  width: 94%;
+}
+
+.success {
+  display: none;
   margin: 0 0 1rem;
   width: 94%;
 }
@@ -1667,6 +1673,14 @@ button.active {
 
 .team-members-hd tr th:nth-child(1), .team-members-hd tr th:nth-child(2) {
   width: 43%;
+}
+
+.success-message {
+  display: none;
+}
+
+.slink {
+  color: #333;
 }
 
 @media screen and (min-width: 1290px) {

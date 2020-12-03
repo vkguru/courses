@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavDarkLogin from '../component/navdarkadmin-login';
+import { Link } from 'react-router-dom';
 
 export default class RegMembers extends Component {
 
@@ -83,12 +84,8 @@ export default class RegMembers extends Component {
     .then(function(response) {
       if (response.ok) {
         console.log(response)
-        this.setState({success: 'Registered Successfully'});
-        document.querySelector('.success').style.visibility = 'visible';
-        setTimeout(() => {
-          this.setState({success: ''})
-          document.querySelector('.success').style.visibility = 'hidden'
-        }, 5000)
+        document.querySelector('.success').style.display = 'block';
+        document.querySelector('.success-message').style.display = 'block';
         return response.json();
       } else {
         // const err = document.querySelectorAll('.err-txt');
@@ -123,7 +120,7 @@ export default class RegMembers extends Component {
           <form className="cr-form" onSubmit={this.handleSubmit}>
 
             <div className="success">
-              <p>{this.state.success}</p>
+              <p className='success-message'>Registration successful! You can now send invites to registered team members <Link className="slink" to="/teams/registered-members">here</Link></p>
             </div>
 
             {this.createForm()}
