@@ -9,7 +9,6 @@ export default class RegMembers extends Component {
     const teamName = localStorage.getItem('team_name');
     this.state = {
       users: [{team_name:teamName, email: ""}],
-      success: ''
     };
   }
 
@@ -88,10 +87,6 @@ export default class RegMembers extends Component {
         document.querySelector('.success-message').style.display = 'block';
         return response.json();
       } else {
-        // const err = document.querySelectorAll('.err-txt');
-        // err.forEach(e => {
-        //   e.style.display = "block";
-        // });
         console.log('not working');
       }
     })

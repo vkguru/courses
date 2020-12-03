@@ -7,6 +7,7 @@ export default function RegisteredTeam() {
   const token = localStorage.getItem('admtok');
   const teamName = localStorage.getItem('team_name');
   const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [notify, setNotify] = useState(null);
 
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function RegisteredTeam() {
       });
       const data = await res.json();
       setResults(data.users);
+      setLoading(false);
     } catch(err) {
       console.log(err)
     }
@@ -79,41 +81,49 @@ export default function RegisteredTeam() {
         <h4>{teamName}</h4>
       </div>
 
-      <div className="team">
+      <div className="team sp">
 
-        <table className="team-members">
+      {loading === true ? 
 
-          <thead className="team-members-hd">
-            <tr>
-              <th>Email Address</th>
-              <th>Code</th>
-              <th>Action</th>
-            </tr>
-          </thead>
+        <div className="spinner"></div>
 
-          <tbody className="team-members-tb">
-            {results.map((result, index) => (
-              <tr key={result.id} className={(index+1) % 2 === 0 ? `tra` : `tro` }>
-                <td>{result.email}</td>
-                <td>{result.code}</td>
-                <td>
-                  <button className="invite-btn" onClick={()=>{sendInvite(result.id)}}>
-                    Send Invite 
-                  </button>
-                    {notify === result.id ?
-                      <svg width="15" height="16" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10.5955" cy="10.0769" r="9.72241" fill="#009A49"/>
-                      <path d="M8.64638 12.4329L6.11131 9.89781L5.24805 10.755L8.64638 14.1533L15.9416 6.85816L15.0844 6.00098L8.64638 12.4329Z" fill="white"/>
-                      </svg>
-                      :
-                      ''
-                    }
-                </td>
+        : 
+
+          <table className="team-members">
+
+            <thead className="team-members-hd">
+              <tr>
+                <th>Email Address</th>
+                <th>Code</th>
+                <th>Action</th>
               </tr>
-            ))}
-          </tbody>
+            </thead>
 
-        </table>
+            <tbody className="team-members-tb">
+              {results.map((result, index) => (
+                <tr key={result.id} className={(index+1) % 2 === 0 ? `tra` : `tro` }>
+                  <td>{result.email}</td>
+                  <td>{result.code}</td>
+                  <td>
+                    <button className="invite-btn" onClick={()=>{sendInvite(result.id)}}>
+                      Send Invite 
+                    </button>
+                      {notify === result.id ?
+                        <svg width="15" height="16" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10.5955" cy="10.0769" r="9.72241" fill="#009A49"/>
+                        <path d="M8.64638 12.4329L6.11131 9.89781L5.24805 10.755L8.64638 14.1533L15.9416 6.85816L15.0844 6.00098L8.64638 12.4329Z" fill="white"/>
+                        </svg>
+                        :
+                        ''
+                      }
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+
+          </table>
+
+        }
 
       </div>
 
