@@ -2073,6 +2073,14 @@ button.active {
     width: 97%;
     margin-left: 0;
   }
+
+  .logo a img {
+    width: 25%;
+  }
+
+  .icons {
+    width: 15%;
+  }
   
 
 }
