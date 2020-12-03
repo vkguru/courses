@@ -31,9 +31,7 @@ export default class Login extends Component {
       console.log('error');
     }
 
-    console.log(isAdmin)
-
-    // Check if User is still logged In
+    // Check if user is successfully logged In
     if(accessCode && user) {
       window.location = '/course-board';
     }

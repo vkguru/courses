@@ -2029,6 +2029,10 @@ button.active {
   .team {
     width: 100%;
   }
+
+  .tm {
+    width: 88%;
+  }
   
 
 }
