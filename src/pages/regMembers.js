@@ -107,7 +107,7 @@ export default class RegMembers extends Component {
         <NavDarkLogin />
 
         <div className="reg-title">
-          <h3>Teams Members Registration</h3>
+          <h3>Team Members Registration</h3>
         </div>
 
         <div className="formHolder">
