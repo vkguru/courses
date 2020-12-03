@@ -1909,8 +1909,8 @@ button.active {
     margin-right: 0;
   }
 
-  .py {
-    width: 97%;
+  .submit.py {
+    width: 94%;
   }
 
   .checkout-product{
@@ -2067,6 +2067,11 @@ button.active {
 
   .tm {
     width: 88%;
+  }
+
+  .sub-form button {
+    width: 97%;
+    margin-left: 0;
   }
   
 
