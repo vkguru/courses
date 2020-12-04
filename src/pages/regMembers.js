@@ -87,6 +87,12 @@ export default class RegMembers extends Component {
         document.querySelector('.success-message').style.display = 'block';
         return response.json();
       } else {
+        document.querySelector('.error-treg').style.display= 'block';
+        document.querySelector('.error-treg p').style.display= 'block';
+        setTimeout(() => {
+          document.querySelector('.error-treg').style.display= 'none';
+          document.querySelector('.error-treg p').style.display= 'none';
+        }, 7000);
         console.log('not working');
       }
     })
@@ -113,6 +119,10 @@ export default class RegMembers extends Component {
         <div className="formHolder">
 
           <form className="cr-form" onSubmit={this.handleSubmit}>
+
+            <div className="error-treg">
+              <p>Sorry, the registration wasn't successful kindly try again.</p>
+            </div>
 
             <div className="success">
               <p className='success-message'>Registration successful! You can now send invites to registered team members <Link className="slink" to="/teams/registered-members">here</Link></p>

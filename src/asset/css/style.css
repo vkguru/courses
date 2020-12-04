@@ -1092,6 +1092,22 @@ button.active {
   width: 94%;
 }
 
+.error-treg {
+  display: none;
+  margin: 0 0 1rem;
+  width: 94%;
+}
+
+.error-treg p {
+  font-family: "Gilroy SemiBold";
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px 20px;
+  color: #333;
+  background-color: #e7c351d1;
+  display: none;
+}
+
 .success {
   display: none;
   margin: 0 0 1rem;
